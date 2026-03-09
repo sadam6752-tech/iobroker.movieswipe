@@ -1,3 +1,0 @@
-Placeholder for movieswipe.png icon
-Please add a 256x256 PNG icon here.
-You can use the PWA icon from movieswipe-pwa/public/pwa-512x512.png
