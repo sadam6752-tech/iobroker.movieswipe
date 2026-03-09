@@ -1,0 +1,300 @@
+{
+  "common": {
+    "name": "movieswipe",
+    "version": "0.1.0",
+    "news": {
+      "0.1.0": {
+        "en": "Initial release with web server and sync management",
+        "de": "Erstveröffentlichung mit Webserver und Synchronisationsverwaltung",
+        "ru": "Первый релиз с веб-сервером и управлением синхронизацией"
+      }
+    },
+    "title": "MovieSwipe PWA",
+    "titleLang": {
+      "en": "MovieSwipe PWA",
+      "de": "MovieSwipe PWA",
+      "ru": "MovieSwipe PWA"
+    },
+    "desc": {
+      "en": "Movie discovery PWA with Kinopoisk API integration",
+      "de": "Film-Entdeckungs-PWA mit Kinopoisk-API-Integration",
+      "ru": "PWA для поиска фильмов с интеграцией Kinopoisk API"
+    },
+    "authors": [
+      "sadam6752-tech <sadam6752@gmail.com>"
+    ],
+    "keywords": [
+      "movieswipe",
+      "movies",
+      "pwa",
+      "kinopoisk",
+      "multimedia"
+    ],
+    "licenseInformation": {
+      "license": "MIT",
+      "type": "free"
+    },
+    "platform": "Javascript/Node.js",
+    "icon": "movieswipe.png",
+    "enabled": true,
+    "extIcon": "https://raw.githubusercontent.com/sadam6752-tech/ioBroker.movieswipe/main/admin/movieswipe.png",
+    "readme": "https://github.com/sadam6752-tech/ioBroker.movieswipe/blob/main/README.md",
+    "loglevel": "info",
+    "mode": "daemon",
+    "type": "multimedia",
+    "compact": true,
+    "connectionType": "local",
+    "dataSource": "push",
+    "adminUI": {
+      "config": "json"
+    },
+    "dependencies": [
+      {
+        "js-controller": ">=5.0.0"
+      }
+    ],
+    "globalDependencies": [],
+    "tier": 3
+  },
+  "native": {
+    "port": 3000,
+    "apiKeys": [],
+    "minRating": 5.0,
+    "minVotes": 500,
+    "yearRangeStart": 2020,
+    "yearRangeEnd": 2026,
+    "autoSync": false,
+    "syncInterval": 24
+  },
+  "objects": [],
+  "instanceObjects": [
+    {
+      "_id": "info",
+      "type": "channel",
+      "common": {
+        "name": "Information"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.connection",
+      "type": "state",
+      "common": {
+        "role": "indicator.connected",
+        "name": "Connection status",
+        "type": "boolean",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "sync",
+      "type": "channel",
+      "common": {
+        "name": "Synchronization"
+      },
+      "native": {}
+    },
+    {
+      "_id": "sync.start",
+      "type": "state",
+      "common": {
+        "role": "button.start",
+        "name": "Start synchronization",
+        "type": "boolean",
+        "read": true,
+        "write": true,
+        "def": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "sync.stop",
+      "type": "state",
+      "common": {
+        "role": "button.stop",
+        "name": "Stop synchronization",
+        "type": "boolean",
+        "read": true,
+        "write": true,
+        "def": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "sync.status",
+      "type": "state",
+      "common": {
+        "role": "text",
+        "name": "Synchronization status",
+        "type": "string",
+        "read": true,
+        "write": false,
+        "def": "idle",
+        "states": {
+          "idle": "Idle",
+          "running": "Running",
+          "error": "Error",
+          "completed": "Completed"
+        }
+      },
+      "native": {}
+    },
+    {
+      "_id": "sync.progress",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Synchronization progress",
+        "type": "number",
+        "read": true,
+        "write": false,
+        "def": 0,
+        "min": 0,
+        "max": 100,
+        "unit": "%"
+      },
+      "native": {}
+    },
+    {
+      "_id": "sync.currentStep",
+      "type": "state",
+      "common": {
+        "role": "text",
+        "name": "Current step",
+        "type": "string",
+        "read": true,
+        "write": false,
+        "def": ""
+      },
+      "native": {}
+    },
+    {
+      "_id": "sync.totalMovies",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Total movies in database",
+        "type": "number",
+        "read": true,
+        "write": false,
+        "def": 0
+      },
+      "native": {}
+    },
+    {
+      "_id": "sync.newMovies",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "New movies added",
+        "type": "number",
+        "read": true,
+        "write": false,
+        "def": 0
+      },
+      "native": {}
+    },
+    {
+      "_id": "sync.requestsUsed",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "API requests used",
+        "type": "number",
+        "read": true,
+        "write": false,
+        "def": 0
+      },
+      "native": {}
+    },
+    {
+      "_id": "sync.requestsRemaining",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "API requests remaining",
+        "type": "number",
+        "read": true,
+        "write": false,
+        "def": 0
+      },
+      "native": {}
+    },
+    {
+      "_id": "sync.lastSync",
+      "type": "state",
+      "common": {
+        "role": "date",
+        "name": "Last synchronization",
+        "type": "string",
+        "read": true,
+        "write": false,
+        "def": ""
+      },
+      "native": {}
+    },
+    {
+      "_id": "sync.error",
+      "type": "state",
+      "common": {
+        "role": "text",
+        "name": "Error message",
+        "type": "string",
+        "read": true,
+        "write": false,
+        "def": ""
+      },
+      "native": {}
+    },
+    {
+      "_id": "server",
+      "type": "channel",
+      "common": {
+        "name": "Web Server"
+      },
+      "native": {}
+    },
+    {
+      "_id": "server.url",
+      "type": "state",
+      "common": {
+        "role": "text.url",
+        "name": "Application URL",
+        "type": "string",
+        "read": true,
+        "write": false,
+        "def": ""
+      },
+      "native": {}
+    },
+    {
+      "_id": "server.port",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Server port",
+        "type": "number",
+        "read": true,
+        "write": false,
+        "def": 3000
+      },
+      "native": {}
+    },
+    {
+      "_id": "server.running",
+      "type": "state",
+      "common": {
+        "role": "indicator.reachable",
+        "name": "Server running",
+        "type": "boolean",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "type": "tabs",
+  "items": {
+    "general": {
+      "type": "panel",
+      "label": "General Settings",
+      "icon": "settings",
+      "items": {
+        "_port": {
+          "type": "header",
+          "text": "Web Server",
+          "size": 3
+        },
+        "port": {
+          "type": "number",
+          "label": "Port",
+          "min": 1024,
+          "max": 65535,
+          "default": 3000,
+          "help": "Port for the web server (PWA application)",
+          "sm": 12,
+          "md": 6,
+          "lg": 4
+        },
+        "_apiKeys": {
+          "type": "header",
+          "text": "API Configuration",
+          "size": 3
+        },
+        "apiKeys": {
+          "type": "chips",
+          "label": "API Keys",
+          "help": "Kinopoisk API keys (one or more). The adapter will use them in rotation.",
+          "delimiter": ",",
+          "sm": 12,
+          "md": 12,
+          "lg": 12
+        },
+        "_info": {
+          "type": "staticText",
+          "text": "Get your API key at: https://api.kinopoisk.dev/",
+          "style": {
+            "fontSize": "12px",
+            "fontStyle": "italic",
+            "color": "#888"
+          },
+          "sm": 12
+        }
+      }
+    },
+    "sync": {
+      "type": "panel",
+      "label": "Synchronization",
+      "icon": "sync",
+      "items": {
+        "_filters": {
+          "type": "header",
+          "text": "Content Filters",
+          "size": 3
+        },
+        "minRating": {
+          "type": "slider",
+          "label": "Minimum Rating",
+          "min": 0,
+          "max": 10,
+          "step": 0.1,
+          "default": 5.0,
+          "unit": "★",
+          "help": "Minimum Kinopoisk rating for movies",
+          "sm": 12,
+          "md": 6,
+          "lg": 6
+        },
+        "minVotes": {
+          "type": "number",
+          "label": "Minimum Votes",
+          "min": 0,
+          "max": 100000,
+          "step": 100,
+          "default": 500,
+          "help": "Minimum number of votes (popularity filter)",
+          "sm": 12,
+          "md": 6,
+          "lg": 6
+        },
+        "_yearRange": {
+          "type": "header",
+          "text": "Year Range",
+          "size": 3
+        },
+        "yearRangeStart": {
+          "type": "number",
+          "label": "Start Year",
+          "min": 1900,
+          "max": 2030,
+          "default": 2020,
+          "help": "Starting year for movie search",
+          "sm": 12,
+          "md": 6,
+          "lg": 6
+        },
+        "yearRangeEnd": {
+          "type": "number",
+          "label": "End Year",
+          "min": 1900,
+          "max": 2030,
+          "default": 2026,
+          "help": "Ending year for movie search",
+          "sm": 12,
+          "md": 6,
+          "lg": 6
+        },
+        "_advanced": {
+          "type": "header",
+          "text": "Advanced Settings",
+          "size": 3
+        },
+        "maxRequests": {
+          "type": "number",
+          "label": "Max Requests per Run",
+          "min": 1,
+          "max": 200,
+          "help": "Maximum API requests per synchronization run (leave empty for unlimited)",
+          "sm": 12,
+          "md": 6,
+          "lg": 6
+        },
+        "autoSync": {
+          "type": "checkbox",
+          "label": "Auto Sync",
+          "help": "Automatically synchronize on adapter start",
+          "default": false,
+          "sm": 12,
+          "md": 6,
+          "lg": 6
+        },
+        "syncInterval": {
+          "type": "number",
+          "label": "Sync Interval",
+          "min": 1,
+          "max": 168,
+          "default": 24,
+          "unit": "hours",
+          "help": "Interval between automatic synchronizations (if Auto Sync is enabled)",
+          "hidden": "!data.autoSync",
+          "sm": 12,
+          "md": 6,
+          "lg": 6
+        }
+      }
+    },
+    "status": {
+      "type": "panel",
+      "label": "Status",
+      "icon": "info",
+      "items": {
+        "_serverStatus": {
+          "type": "header",
+          "text": "Web Server Status",
+          "size": 3
+        },
+        "_serverInfo": {
+          "type": "staticText",
+          "text": "Server URL: <a href='http://localhost:3000' target='_blank'>http://localhost:3000</a>",
+          "sm": 12
+        },
+        "_syncStatus": {
+          "type": "header",
+          "text": "Synchronization Status",
+          "size": 3
+        },
+        "_syncInfo": {
+          "type": "staticText",
+          "text": "Use the 'sync.start' state to trigger synchronization, or check the current status in the Objects tab.",
+          "sm": 12
+        },
+        "_help": {
+          "type": "header",
+          "text": "Help",
+          "size": 3
+        },
+        "_helpText": {
+          "type": "staticText",
+          "text": "For more information, visit the <a href='https://github.com/sadam6752-tech/ioBroker.movieswipe' target='_blank'>GitHub repository</a>.",
+          "sm": 12
+        }
+      }
+    }
+  }
+}

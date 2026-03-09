@@ -1,0 +1,52 @@
+{
+  "name": "iobroker.movieswipe",
+  "version": "0.1.0",
+  "description": "ioBroker adapter for MovieSwipe PWA - Movie discovery application with Kinopoisk API integration",
+  "author": {
+    "name": "sadam6752-tech",
+    "email": "sadam6752@gmail.com"
+  },
+  "homepage": "https://github.com/sadam6752-tech/ioBroker.movieswipe",
+  "license": "MIT",
+  "keywords": [
+    "ioBroker",
+    "movieswipe",
+    "movies",
+    "pwa",
+    "kinopoisk",
+    "multimedia"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sadam6752-tech/ioBroker.movieswipe.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@iobroker/adapter-core": "^3.2.2",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@iobroker/testing": "^5.1.1",
+    "@iobroker/adapter-dev": "^1.3.0",
+    "@types/node": "^22.10.2",
+    "eslint": "^9.17.0"
+  },
+  "main": "main.js",
+  "files": [
+    "admin/",
+    "lib/",
+    "scripts/",
+    "www/",
+    "io-package.json",
+    "LICENSE",
+    "main.js"
+  ],
+  "scripts": {
+    "test": "npm run test:package && npm run test:integration",
+    "test:package": "mocha test/package --exit",
+    "test:integration": "mocha test/integration --exit",
+    "lint": "eslint ."
+  }
+}

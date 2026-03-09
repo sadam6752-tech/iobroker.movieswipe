@@ -1,0 +1,36 @@
+# Node.js
+node_modules/
+npm-debug.log
+package-lock.json
+
+# ioBroker
+.commitinfo
+iob_npm.done
+*.tgz
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Test
+coverage/
+.nyc_output/
+
+# Build
+dist/
+build/
+
+# Temporary
+tmp/
+temp/
