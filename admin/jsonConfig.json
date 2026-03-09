@@ -4,7 +4,6 @@
     "general": {
       "type": "panel",
       "label": "General Settings",
-      "icon": "settings",
       "items": {
         "_port": {
           "type": "header",
@@ -51,7 +50,6 @@
     "sync": {
       "type": "panel",
       "label": "Synchronization",
-      "icon": "sync",
       "items": {
         "_filters": {
           "type": "header",
@@ -152,7 +150,6 @@
     "status": {
       "type": "panel",
       "label": "Status",
-      "icon": "info",
       "items": {
         "_serverStatus": {
           "type": "header",

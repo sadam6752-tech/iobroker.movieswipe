@@ -91,44 +91,15 @@ After installation and configuration:
 
 ### Starting Synchronization
 
-**Via Admin Interface:**
-- Click "Start Synchronization" button in adapter settings
-
-**Via States:**
-```javascript
-setState('movieswipe.0.sync.start', true);
-```
-
-**Via Script:**
-```javascript
-// Start sync
-sendTo('movieswipe.0', 'startSync', {}, (result) => {
-    log('Sync started: ' + JSON.stringify(result));
-});
-
-// Stop sync
-sendTo('movieswipe.0', 'stopSync', {}, (result) => {
-    log('Sync stopped: ' + JSON.stringify(result));
-});
-```
+Set the `sync.start` state to `true` in the Objects tab to start synchronization.
 
 ### Monitoring Progress
 
-```javascript
-// Subscribe to sync status
-on({ id: 'movieswipe.0.sync.status', change: 'any' }, (obj) => {
-    log('Sync status: ' + obj.state.val);
-});
-
-// Subscribe to progress
-on({ id: 'movieswipe.0.sync.progress', change: 'any' }, (obj) => {
-    log('Progress: ' + obj.state.val + '%');
-});
-
-// Get total movies
-const totalMovies = getState('movieswipe.0.sync.totalMovies').val;
-log('Total movies in database: ' + totalMovies);
-```
+Monitor synchronization progress through the following states:
+- `sync.status` - Current status
+- `sync.progress` - Progress percentage
+- `sync.totalMovies` - Total movies in database
+- `sync.newMovies` - New movies added
 
 ## States
 
@@ -161,20 +132,9 @@ log('Total movies in database: ' + totalMovies);
 
 ## API Keys
 
-### Getting Kinopoisk API Key
+Get your Kinopoisk API key at https://api.kinopoisk.dev/ and add it to the adapter configuration.
 
-1. Register at https://api.kinopoisk.dev/
-2. Get your API key from dashboard
-3. Add key(s) to adapter configuration
-4. Free tier: 200 requests/day per key
-
-### Multiple Keys
-
-The adapter supports multiple API keys for extended daily limits:
-- Add multiple keys separated by commas
-- Automatic rotation when daily limit reached
-- Each key: 200 requests/day
-- 2 keys = 400 requests/day, etc.
+Free tier provides 200 requests per day per key. You can add multiple keys for extended limits.
 
 ## Troubleshooting
 
