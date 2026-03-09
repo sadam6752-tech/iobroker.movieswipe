@@ -1,9 +1,9 @@
 {
   "common": {
     "name": "movieswipe",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "news": {
-      "0.1.0": {
+      "1.0.0": {
         "en": "Initial release with web server and sync management",
         "de": "Erstveröffentlichung mit Webserver und Synchronisationsverwaltung",
         "ru": "Первый релиз с веб-сервером и управлением синхронизацией",
