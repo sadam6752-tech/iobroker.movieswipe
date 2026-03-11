@@ -1,8 +1,20 @@
 {
   "common": {
     "name": "movieswipe",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "news": {
+      "1.0.3": {
+        "en": "Improve sync progress tracking and output parsing",
+        "de": "Verbessertes Tracking des Synchronisierungsfortschritts und Ausgabeverarbeitung",
+        "ru": "Улучшено отслеживание прогресса синхронизации и парсинг вывода",
+        "fr": "Suivi amélioré de la progression de la synchronisation et analyse de la sortie",
+        "it": "Tracciamento migliorato della progressione della sincronizzazione e analisi dell'output",
+        "es": "Seguimiento mejorado del progreso de sincronización y análisis de salida",
+        "pl": "Ulepszone śledzenie postępu synchronizacji i analiza danych wyjściowych",
+        "pt": "Rastreamento melhorado do progresso de sincronização e análise de saída",
+        "nl": "Verbeterde voortgangstracking en uitvoeranalyse voor synchronisatie",
+        "zh-cn": "改进同步进度跟踪和输出解析"
+      },
       "1.0.2": {
         "en": "Add app reload signal and improve sync documentation",
         "de": "App-Neuladen-Signal hinzugefügt und Synchronisierungsdokumentation verbessert",

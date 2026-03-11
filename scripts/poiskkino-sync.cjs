@@ -475,6 +475,7 @@ async function sync(apiKey, maxRequests = null) {
       progress.requestsToday++;
 
       console.log(`Получено ${result.movies.length} фильмов`);
+      console.log(`Прогресс: ${requestCount}/${requestsLimit} запросов, всего: ${progress.totalMovies} фильмов`);
 
       // Конвертируем и сохраняем
       const convertedMovies = result.movies.map(convertMovie);
