@@ -39,6 +39,7 @@ const CONFIG = {
   MOVIES_PER_REQUEST: 250, // Максимум результатов на странице
   MAX_REQUESTS_PER_DAY: 200, // По умолчанию для бесплатного тарифа
   MIN_RATING: 5.0,
+  MAX_RATING: 10.0,
   MIN_VOTES: 500, // Минимум голосов для популярности
   INITIAL_YEARS: 5, // Начинаем с последних 5 лет
 };
@@ -348,7 +349,7 @@ async function fetchMovies(apiKey, progress) {
   // Параметры запроса
   const params = {
     // Фильтры
-    'rating.kp': `${CONFIG.MIN_RATING}-10`,
+    'rating.kp': `${CONFIG.MIN_RATING}-${CONFIG.MAX_RATING}`,
     'votes.kp': `${CONFIG.MIN_VOTES}-10000000`,
     'year': `${progress.yearRange.start}-${progress.yearRange.end}`,
     // Убрали фильтр 'type': 'movie' чтобы загружать все типы контента
@@ -663,6 +664,11 @@ if (require.main === module) {
   const minRatingIndex = args.indexOf('--min-rating');
   if (minRatingIndex !== -1 && args[minRatingIndex + 1]) {
     CONFIG.MIN_RATING = parseFloat(args[minRatingIndex + 1]);
+  }
+
+  const maxRatingIndex = args.indexOf('--max-rating');
+  if (maxRatingIndex !== -1 && args[maxRatingIndex + 1]) {
+    CONFIG.MAX_RATING = parseFloat(args[maxRatingIndex + 1]);
   }
 
   const minVotesIndex = args.indexOf('--min-votes');

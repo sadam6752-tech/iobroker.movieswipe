@@ -1,8 +1,20 @@
 {
   "common": {
     "name": "movieswipe",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "news": {
+      "1.0.9": {
+        "en": "Add max rating filter, multilingual admin UI, and update database to 51278 movies",
+        "de": "Maximale Bewertungsfilter, mehrsprachige Admin-UI und Datenbankaktualisierung auf 51278 Filme hinzugefügt",
+        "ru": "Добавлен фильтр максимального рейтинга, мультиязычный интерфейс администратора и обновлена база на 51278 фильмов",
+        "fr": "Ajout du filtre de note maximale, interface d'administration multilingue et mise à jour de la base de données à 51278 films",
+        "it": "Aggiunto filtro di valutazione massima, interfaccia amministrativa multilingue e aggiornamento del database a 51278 film",
+        "es": "Agregado filtro de calificación máxima, interfaz de administración multilingüe y actualización de base de datos a 51278 películas",
+        "pl": "Dodano filtr maksymalnej oceny, wielojęzyczny interfejs administracyjny i aktualizacja bazy danych do 51278 filmów",
+        "pt": "Adicionado filtro de classificação máxima, interface de administração multilíngue e atualização do banco de dados para 51278 filmes",
+        "nl": "Maximale beoordelingsfilter, meertalige admin-interface en database-update naar 51278 films toegevoegd",
+        "zh-cn": "添加最大评分过滤器、多语言管理员UI和数据库更新至51278部电影"
+      },
       "1.0.8": {
         "en": "Fix API daily limit - correct value is 200 requests/day for free tier, not 250",
         "de": "API-Tageslimit korrigiert - korrekter Wert ist 200 Anfragen/Tag für kostenlosen Tarif, nicht 250",
@@ -180,6 +192,7 @@
     "port": 3000,
     "apiKeys": [],
     "minRating": 5.0,
+    "maxRating": 10.0,
     "minVotes": 500,
     "yearRangeStart": 2020,
     "yearRangeEnd": 2026,
