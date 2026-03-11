@@ -1,8 +1,20 @@
 {
   "common": {
     "name": "movieswipe",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "news": {
+      "1.0.8": {
+        "en": "Fix API daily limit - correct value is 200 requests/day for free tier, not 250",
+        "de": "API-Tageslimit korrigiert - korrekter Wert ist 200 Anfragen/Tag für kostenlosen Tarif, nicht 250",
+        "ru": "Исправлен дневной лимит API - правильное значение 200 запросов/день для бесплатного тарифа, не 250",
+        "fr": "Limite quotidienne de l'API corrigée - la valeur correcte est 200 requêtes/jour pour le tarif gratuit, pas 250",
+        "it": "Limite giornaliero API corretto - il valore corretto è 200 richieste/giorno per il piano gratuito, non 250",
+        "es": "Límite diario de API corregido - el valor correcto es 200 solicitudes/día para el plan gratuito, no 250",
+        "pl": "Poprawiony dzienny limit API - prawidłowa wartość to 200 żądań/dzień dla planu bezpłatnego, a nie 250",
+        "pt": "Limite diário de API corrigido - o valor correto é 200 solicitações/dia para o plano gratuito, não 250",
+        "nl": "API dagelijks limiet gecorrigeerd - juiste waarde is 200 verzoeken/dag voor gratis plan, niet 250",
+        "zh-cn": "修复API每日限制 - 免费套餐的正确值是200个请求/天，而不是250个"
+      },
       "1.0.7": {
         "en": "Implement auto sync with smart API key rotation and cooldown tracking",
         "de": "Automatische Synchronisierung mit intelligenter API-Schlüssel-Rotation und Cooldown-Verfolgung implementiert",
@@ -173,8 +185,8 @@
     "yearRangeEnd": 2026,
     "autoSync": false,
     "syncInterval": 24,
-    "maxRequestsPerRun": 250,
-    "dailyRequestLimit": 250
+    "maxRequestsPerRun": 200,
+    "dailyRequestLimit": 200
   },
   "objects": [],
   "instanceObjects": [

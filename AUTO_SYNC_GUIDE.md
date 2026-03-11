@@ -81,14 +81,16 @@ Day 2, 10:15 AM (after Key 1 cooldown expires):
 ## Request Limits
 
 ### Free Tier (Default)
-- Daily Limit: 250 requests/day
-- Max Requests per Run: 250
-- This means you can do one full sync per day
+- Daily Limit: 200 requests/day (not 250!)
+- Max Requests per Run: 200
+- This means you can do one full sync per day with 200 requests
 
 ### Premium Tier
 - Daily Limit: 500-1000+ requests/day (depends on plan)
 - Max Requests per Run: 500-1000+ (depends on plan)
 - With multiple keys, you can do multiple syncs per day
+
+**Note**: The API returns maximum 250 movies per request (limit parameter), but the daily quota is 200 requests for free tier.
 
 ## Rate Limit Handling
 
@@ -113,20 +115,20 @@ The adapter automatically handles API rate limits:
 ## Best Practices
 
 ### Single Key Setup
-- Set Daily Limit to 250 (free tier)
-- Set Max Requests per Run to 250
+- Set Daily Limit to 200 (free tier)
+- Set Max Requests per Run to 200
 - Set Sync Interval to 24 hours
 - Auto sync will run once per day
 
 ### Multiple Keys Setup (2 keys)
-- Set Daily Limit to 250 per key
-- Set Max Requests per Run to 250
+- Set Daily Limit to 200 per key
+- Set Max Requests per Run to 200
 - Set Sync Interval to 12 hours
 - Auto sync will alternate between keys every 12 hours
 
 ### Multiple Keys Setup (3+ keys)
-- Set Daily Limit to 250 per key
-- Set Max Requests per Run to 250
+- Set Daily Limit to 200 per key
+- Set Max Requests per Run to 200
 - Set Sync Interval to 8 hours (for 3 keys)
 - Auto sync will rotate through keys
 

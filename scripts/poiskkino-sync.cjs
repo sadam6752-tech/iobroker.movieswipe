@@ -36,8 +36,8 @@ const CONFIG = {
   API_VERSION: 'v1.5',
   PROGRESS_FILE: path.join(__dirname, '../www/data/.sync-progress.json'),
   OUTPUT_DIR: path.join(__dirname, '../www/data'),
-  MOVIES_PER_REQUEST: 250, // Максимум для API
-  MAX_REQUESTS_PER_DAY: 250, // По умолчанию для бесплатного тарифа
+  MOVIES_PER_REQUEST: 250, // Максимум результатов на странице
+  MAX_REQUESTS_PER_DAY: 200, // По умолчанию для бесплатного тарифа
   MIN_RATING: 5.0,
   MIN_VOTES: 500, // Минимум голосов для популярности
   INITIAL_YEARS: 5, // Начинаем с последних 5 лет
