@@ -1,8 +1,20 @@
 {
   "common": {
     "name": "movieswipe",
-    "version": "1.0.9",
+    "version": "1.0.10",
     "news": {
+      "1.0.10": {
+        "en": "Fix default max requests to 250, improve HTTP 403 rate limit handling",
+        "de": "Standardmäßige maximale Anfragen auf 250 korrigiert, HTTP 403-Ratenlimit-Behandlung verbessert",
+        "ru": "Исправлено значение по умолчанию макс. запросов на 250, улучшена обработка HTTP 403 лимита",
+        "fr": "Correction des demandes maximales par défaut à 250, amélioration de la gestion du limite de débit HTTP 403",
+        "it": "Correzione delle richieste massime predefinite a 250, miglioramento della gestione del limite di velocità HTTP 403",
+        "es": "Corrección de solicitudes máximas predeterminadas a 250, mejora del manejo del límite de velocidad HTTP 403",
+        "pl": "Poprawka domyślnych maksymalnych żądań do 250, ulepszenie obsługi limitu szybkości HTTP 403",
+        "pt": "Correção de solicitações máximas padrão para 250, melhoria do tratamento do limite de taxa HTTP 403",
+        "nl": "Correctie van standaard maximale verzoeken naar 250, verbetering van HTTP 403-snelheidslimietverwerking",
+        "zh-cn": "修复默认最大请求数为250，改进HTTP 403速率限制处理"
+      },
       "1.0.9": {
         "en": "Add max rating filter, multilingual admin UI, and update database to 51278 movies",
         "de": "Maximale Bewertungsfilter, mehrsprachige Admin-UI und Datenbankaktualisierung auf 51278 Filme hinzugefügt",
@@ -198,7 +210,7 @@
     "yearRangeEnd": 2026,
     "autoSync": false,
     "syncInterval": 24,
-    "maxRequestsPerRun": 200,
+    "maxRequestsPerRun": 250,
     "dailyRequestLimit": 200
   },
   "objects": [],

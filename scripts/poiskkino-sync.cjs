@@ -394,9 +394,14 @@ async function fetchMovies(apiKey, progress) {
   if (!response.ok) {
     const errorText = await response.text();
     
-    // Проверяем на ошибку лимита запросов (HTTP 429)
-    if (response.status === 429) {
-      console.error('\n❌ Достигнут лимит запросов API (HTTP 429)');
+    // Проверяем на ошибку лимита запросов (HTTP 403 или 429)
+    if (response.status === 429 || response.status === 403) {
+      console.error('\n❌ Достигнут лимит запросов API');
+      if (response.status === 429) {
+        console.error('   HTTP 429: Rate limit exceeded');
+      } else {
+        console.error('   HTTP 403: Daily quota exceeded');
+      }
       console.error('   Попробуйте позже или используйте другой API ключ');
       shouldStop = true;
       throw new Error(`API Rate Limit Exceeded: ${errorText}`);
