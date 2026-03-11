@@ -1,8 +1,20 @@
 {
   "common": {
     "name": "movieswipe",
-    "version": "1.0.14",
+    "version": "1.0.15",
     "news": {
+      "1.0.15": {
+        "en": "Fix multilingual support - use i18n JSON files instead of label keys, remove words.js",
+        "de": "Mehrsprachige Unterstützung korrigiert - verwende i18n JSON-Dateien statt Label-Schlüssel, entferne words.js",
+        "ru": "Исправлена мультиязычная поддержка - используются i18n JSON файлы вместо label ключей, удален words.js",
+        "fr": "Support multilingue corrigé - utilise les fichiers i18n JSON au lieu des clés de label, supprime words.js",
+        "it": "Supporto multilingue corretto - utilizza i file i18n JSON invece delle chiavi di etichetta, rimuove words.js",
+        "es": "Soporte multilingüe corregido - utiliza archivos i18n JSON en lugar de claves de etiqueta, elimina words.js",
+        "pl": "Naprawiona obsługa wielojęzyczna - używa plików i18n JSON zamiast kluczy etykiet, usuwa words.js",
+        "pt": "Suporte multilíngue corrigido - usa arquivos i18n JSON em vez de chaves de rótulo, remove words.js",
+        "nl": "Meertalige ondersteuning gecorrigeerd - gebruikt i18n JSON-bestanden in plaats van labelsleutels, verwijdert words.js",
+        "zh-cn": "修复多语言支持 - 使用i18n JSON文件而不是标签键，删除words.js"
+      },
       "1.0.14": {
         "en": "Add i18n flag to jsonConfig.json - critical for multilingual support to work",
         "de": "Füge i18n-Flag zu jsonConfig.json hinzu - kritisch für die Funktionalität der mehrsprachigen Unterstützung",
