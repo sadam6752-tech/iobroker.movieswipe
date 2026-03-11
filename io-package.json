@@ -1,8 +1,20 @@
 {
   "common": {
     "name": "movieswipe",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "news": {
+      "1.0.1": {
+        "en": "Fix sync script output directory and add newMovies tracking",
+        "de": "Fehler im Synchronisierungsskript behoben und Verfolgung neuer Filme hinzugefügt",
+        "ru": "Исправлена директория вывода скрипта синхронизации и добавлено отслеживание новых фильмов",
+        "fr": "Répertoire de sortie du script de synchronisation corrigé et suivi des nouveaux films ajouté",
+        "it": "Directory di output dello script di sincronizzazione corretta e aggiunto il tracciamento dei nuovi film",
+        "es": "Directorio de salida del script de sincronización corregido y seguimiento de películas nuevas agregado",
+        "pl": "Naprawiono katalog wyjściowy skryptu synchronizacji i dodano śledzenie nowych filmów",
+        "pt": "Diretório de saída do script de sincronização corrigido e rastreamento de novos filmes adicionado",
+        "nl": "Uitvoermap van synchronisatiescript gerepareerd en tracking van nieuwe films toegevoegd",
+        "zh-cn": "修复同步脚本输出目录并添加新电影跟踪"
+      },
       "1.0.0": {
         "en": "Initial release with web server and sync management",
         "de": "Erstveröffentlichung mit Webserver und Synchronisationsverwaltung",
@@ -214,6 +226,19 @@
       "common": {
         "role": "value",
         "name": "New movies added",
+        "type": "number",
+        "read": true,
+        "write": false,
+        "def": 0
+      },
+      "native": {}
+    },
+    {
+      "_id": "sync.foundMovies",
+      "type": "state",
+      "common": {
+        "role": "value",
+        "name": "Movies found in current sync",
         "type": "number",
         "read": true,
         "write": false,

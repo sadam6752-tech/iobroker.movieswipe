@@ -210,7 +210,7 @@
         },
         "_syncInfo": {
           "type": "staticText",
-          "text": "Use the 'sync.start' state to trigger synchronization, or check the current status in the Objects tab.",
+          "text": "Use the 'sync.start' state to trigger synchronization. After sync completes, refresh the app (F5) to see new movies.",
           "xs": 12,
           "sm": 12,
           "md": 12,
