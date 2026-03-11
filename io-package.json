@@ -1,8 +1,20 @@
 {
   "common": {
     "name": "movieswipe",
-    "version": "1.0.13",
+    "version": "1.0.14",
     "news": {
+      "1.0.14": {
+        "en": "Add i18n flag to jsonConfig.json - critical for multilingual support to work",
+        "de": "Füge i18n-Flag zu jsonConfig.json hinzu - kritisch für die Funktionalität der mehrsprachigen Unterstützung",
+        "ru": "Добавлен флаг i18n в jsonConfig.json - критично для работы мультиязычной поддержки",
+        "fr": "Ajouter le drapeau i18n à jsonConfig.json - critique pour que le support multilingue fonctionne",
+        "it": "Aggiungi il flag i18n a jsonConfig.json - critico per il funzionamento del supporto multilingue",
+        "es": "Agregar bandera i18n a jsonConfig.json - crítico para que funcione el soporte multilingüe",
+        "pl": "Dodaj flagę i18n do jsonConfig.json - krytyczne dla działania obsługi wielojęzycznej",
+        "pt": "Adicionar sinalizador i18n a jsonConfig.json - crítico para que o suporte multilíngue funcione",
+        "nl": "Voeg i18n-vlag toe aan jsonConfig.json - kritiek voor het werken van meertalige ondersteuning",
+        "zh-cn": "将i18n标志添加到jsonConfig.json - 对多语言支持的工作至关重要"
+      },
       "1.0.13": {
         "en": "Fix multilingual admin UI - use i18n keys in jsonConfig.json instead of hardcoded strings",
         "de": "Mehrsprachige Admin-UI korrigiert - verwende i18n-Schlüssel in jsonConfig.json statt hartcodierter Strings",
