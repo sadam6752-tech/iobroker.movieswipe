@@ -1,8 +1,20 @@
 {
   "common": {
     "name": "movieswipe",
-    "version": "1.0.15",
+    "version": "1.0.16",
     "news": {
+      "1.0.16": {
+        "en": "Add eslint.config.js for ESLint 9 compatibility, fix linting warnings",
+        "de": "Füge eslint.config.js für ESLint 9 Kompatibilität hinzu, behebe Linting-Warnungen",
+        "ru": "Добавлен eslint.config.js для совместимости с ESLint 9, исправлены предупреждения линтера",
+        "fr": "Ajouter eslint.config.js pour la compatibilité ESLint 9, corriger les avertissements de linting",
+        "it": "Aggiungi eslint.config.js per la compatibilità ESLint 9, correggi gli avvisi di linting",
+        "es": "Agregar eslint.config.js para compatibilidad con ESLint 9, corregir advertencias de linting",
+        "pl": "Dodaj eslint.config.js dla kompatybilności ESLint 9, napraw ostrzeżenia lintingu",
+        "pt": "Adicionar eslint.config.js para compatibilidade ESLint 9, corrigir avisos de linting",
+        "nl": "Voeg eslint.config.js toe voor ESLint 9 compatibiliteit, corrigeer linting-waarschuwingen",
+        "zh-cn": "添加eslint.config.js以实现ESLint 9兼容性，修复linting警告"
+      },
       "1.0.15": {
         "en": "Fix multilingual support - use i18n JSON files instead of label keys, remove words.js",
         "de": "Mehrsprachige Unterstützung korrigiert - verwende i18n JSON-Dateien statt Label-Schlüssel, entferne words.js",
