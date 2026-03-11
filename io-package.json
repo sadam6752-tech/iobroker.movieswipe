@@ -1,8 +1,20 @@
 {
   "common": {
     "name": "movieswipe",
-    "version": "1.0.10",
+    "version": "1.0.11",
     "news": {
+      "1.0.11": {
+        "en": "Fix multilingual admin UI - use proper translations.json format",
+        "de": "Mehrsprachige Admin-UI korrigiert - verwende korrektes translations.json-Format",
+        "ru": "Исправлена мультиязычная админка - используется правильный формат translations.json",
+        "fr": "Interface d'administration multilingue corrigée - utilise le format translations.json correct",
+        "it": "Interfaccia amministrativa multilingue corretta - utilizza il formato translations.json corretto",
+        "es": "Interfaz de administración multilingüe corregida - utiliza el formato translations.json correcto",
+        "pl": "Naprawiony wielojęzyczny interfejs administracyjny - używa prawidłowego formatu translations.json",
+        "pt": "Interface de administração multilíngue corrigida - usa o formato translations.json correto",
+        "nl": "Meertalige admin-interface gecorrigeerd - gebruikt correct translations.json-formaat",
+        "zh-cn": "修复多语言管理员UI - 使用正确的translations.json格式"
+      },
       "1.0.10": {
         "en": "Fix default max requests to 250, improve HTTP 403 rate limit handling",
         "de": "Standardmäßige maximale Anfragen auf 250 korrigiert, HTTP 403-Ratenlimit-Behandlung verbessert",

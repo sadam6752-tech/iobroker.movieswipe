@@ -73,7 +73,7 @@
         },
         "minRating": {
           "type": "slider",
-          "label": "Rating Range",
+          "label": "Minimum Rating",
           "min": 0,
           "max": 10,
           "step": 0.1,
