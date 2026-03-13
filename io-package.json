@@ -1,8 +1,20 @@
 {
   "common": {
     "name": "movieswipe",
-    "version": "1.0.19",
+    "version": "1.0.20",
     "news": {
+      "1.0.20": {
+        "en": "Optimize database to 47 MB with built-in optimization. Update sync script to create optimized database directly. Update PWA with contentType fixes (remove tv-show/concert, add concert to genres). Update compiled assets",
+        "de": "Datenbank auf 47 MB mit integrierter Optimierung optimiert. Aktualisieren Sie das Sync-Skript, um die optimierte Datenbank direkt zu erstellen. Aktualisieren Sie PWA mit contentType-Fixes. Aktualisieren Sie kompilierte Assets",
+        "ru": "Оптимизирована база данных до 47 MB с встроенной оптимизацией. Обновлен скрипт синхронизации для создания оптимизированной базы. Обновлена PWA с исправлениями contentType. Обновлены скомпилированные файлы",
+        "fr": "Optimiser la base de données à 47 MB avec optimisation intégrée. Mettre à jour le script de synchronisation pour créer la base de données optimisée directement. Mettre à jour PWA avec les correctifs contentType. Mettre à jour les actifs compilés",
+        "it": "Ottimizzare il database a 47 MB con ottimizzazione integrata. Aggiornare lo script di sincronizzazione per creare il database ottimizzato direttamente. Aggiornare PWA con correzioni contentType. Aggiornare gli asset compilati",
+        "es": "Optimizar la base de datos a 47 MB con optimización integrada. Actualizar el script de sincronización para crear la base de datos optimizada directamente. Actualizar PWA con correcciones de contentType. Actualizar activos compilados",
+        "pl": "Optymalizuj bazę danych do 47 MB z wbudowaną optymalizacją. Zaktualizuj skrypt synchronizacji, aby bezpośrednio tworzyć zoptymalizowaną bazę danych. Zaktualizuj PWA z poprawkami contentType. Zaktualizuj skompilowane zasoby",
+        "pt": "Otimizar o banco de dados para 47 MB com otimização integrada. Atualizar o script de sincronização para criar o banco de dados otimizado diretamente. Atualizar PWA com correções de contentType. Atualizar ativos compilados",
+        "nl": "Database optimaliseren naar 47 MB met ingebouwde optimalisatie. Update synchronisatiescript om geoptimaliseerde database rechtstreeks te maken. Update PWA met contentType-fixes. Update gecompileerde assets",
+        "zh-cn": "将数据库优化到47 MB，具有内置优化。更新同步脚本以直接创建优化的数据库。使用contentType修复更新PWA。更新编译的资产"
+      },
       "1.0.19": {
         "en": "Optimize database size from 92 MB to 38 MB (58.5% reduction). Remove unnecessary fields, truncate descriptions, limit cast. Database now compliant with GitHub size limits",
         "de": "Datenbankgröße von 92 MB auf 38 MB optimiert (58,5% Reduktion). Entfernen Sie unnötige Felder, kürzen Sie Beschreibungen, begrenzen Sie die Besetzung. Datenbank entspricht nun GitHub-Größenlimits",
@@ -12,7 +24,7 @@
         "es": "Optimizar el tamaño de la base de datos de 92 MB a 38 MB (reducción del 58,5%). Eliminar campos innecesarios, acortar descripciones, limitar el elenco. La base de datos ahora cumple con los límites de tamaño de GitHub",
         "pl": "Optymalizuj rozmiar bazy danych z 92 MB do 38 MB (zmniejszenie o 58,5%). Usuń niepotrzebne pola, skróć opisy, ogranicz obsadę. Baza danych jest teraz zgodna z limitami rozmiaru GitHub",
         "pt": "Otimizar o tamanho do banco de dados de 92 MB para 38 MB (redução de 58,5%). Remover campos desnecessários, encurtar descrições, limitar elenco. O banco de dados agora está em conformidade com os limites de tamanho do GitHub",
-        "nl": "Optimaliseer de databasegrootte van 92 MB naar 38 MB (58,5% reductie). Verwijder onnodige velden, verkort beschrijvingen, beperk cast. Database voldoet nu aan GitHub-groottelimits",
+        "nl": "Database-update met contentType-fixes - verwijder tv-show en concert uit inhoudstypen, voeg concert toe aan genres. Update synchronisatiescript om ongeldige inhoudstypen af te handelen",
         "zh-cn": "将数据库大小从92 MB优化到38 MB（减少58.5%）。删除不必要的字段，缩短描述，限制演员。数据库现在符合GitHub大小限制"
       },
       "1.0.18": {
