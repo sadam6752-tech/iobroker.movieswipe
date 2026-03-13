@@ -251,9 +251,9 @@
           "text": "Synchronization Status",
           "size": 3
         },
-        "_totalMovies": {
+        "_totalMoviesInfo": {
           "type": "staticText",
-          "text": "Total movies in database: {data._alive.sync.totalMovies}",
+          "text": "Total movies in database: Check 'sync.totalMovies' state in Objects tab",
           "xs": 12,
           "sm": 12,
           "md": 12,

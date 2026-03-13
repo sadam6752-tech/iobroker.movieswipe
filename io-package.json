@@ -1,8 +1,20 @@
 {
   "common": {
     "name": "movieswipe",
-    "version": "1.0.22",
+    "version": "1.0.23",
     "news": {
+      "1.0.23": {
+        "en": "Fix sync script mappings and update database. Remove duplicate GENRE_MAP entries. Remove invalid tv-show content type. Add concert genre support. New clean database with all fixes applied.",
+        "de": "Sync-Skript-Zuordnungen korrigiert und Datenbank aktualisiert. Doppelte GENRE_MAP-Einträge entfernt. Ungültigen tv-show-Inhaltstyp entfernt. Konzertgenre-Unterstützung hinzugefügt. Neue saubere Datenbank mit allen Korrekturen.",
+        "ru": "Исправлены маппинги в скрипте синхронизации и обновлена база данных. Удалены дубликаты в GENRE_MAP. Удален невалидный тип контента tv-show. Добавлена поддержка жанра концерт. Новая чистая база со всеми исправлениями.",
+        "fr": "Correction des mappages de script de synchronisation et mise à jour de la base de données. Suppression des entrées GENRE_MAP en double. Suppression du type de contenu tv-show invalide. Ajout de la prise en charge du genre concert. Nouvelle base de données propre avec toutes les corrections appliquées.",
+        "it": "Correzione mappature script di sincronizzazione e aggiornamento database. Rimosse voci GENRE_MAP duplicate. Rimosso tipo di contenuto tv-show non valido. Aggiunto supporto genere concerto. Nuovo database pulito con tutte le correzioni applicate.",
+        "es": "Corregir mapeos de script de sincronización y actualizar base de datos. Eliminar entradas GENRE_MAP duplicadas. Eliminar tipo de contenido tv-show no válido. Agregar soporte de género de concierto. Nueva base de datos limpia con todas las correcciones aplicadas.",
+        "pl": "Naprawiono mapowania skryptu synchronizacji i zaktualizowano bazę danych. Usunięto zduplikowane wpisy GENRE_MAP. Usunięto nieprawidłowy typ zawartości tv-show. Dodano obsługę gatunku koncertowego. Nowa czysta baza danych ze wszystkimi poprawkami.",
+        "pt": "Corrigir mapeamentos de script de sincronização e atualizar banco de dados. Remover entradas GENRE_MAP duplicadas. Remover tipo de conteúdo tv-show inválido. Adicionar suporte ao gênero de concerto. Novo banco de dados limpo com todas as correções aplicadas.",
+        "nl": "Synchronisatiescript-mappings gecorrigeerd en database bijgewerkt. Dubbele GENRE_MAP-vermeldingen verwijderd. Ongeldig tv-show-inhoudstype verwijderd. Concertgenre-ondersteuning toegevoegd. Nieuwe schone database met alle correcties toegepast.",
+        "zh-cn": "修复同步脚本映射并更新数据库。删除重复的GENRE_MAP条目。删除无效的tv-show内容类型。添加音乐会类型支持。应用所有修复的新干净数据库。"
+      },
       "1.0.22": {
         "en": "Add API key rotation for multiple keys. Display actual movie count in admin UI. Fix concert genre mapping in sync script.",
         "de": "API-Schlüsselrotation für mehrere Schlüssel hinzugefügt. Tatsächliche Filmanzahl in Admin-UI anzeigen. Konzertgenre-Zuordnung im Sync-Skript korrigiert.",
@@ -74,18 +86,6 @@
         "pt": "Limpeza da seção de notícias - mantenha apenas as últimas 7 versões de acordo com os padrões ioBroker",
         "nl": "Opschoning van het nieuwsgedeelte - behoud alleen de laatste 7 versies volgens ioBroker-standaarden",
         "zh-cn": "清理新闻部分 - 仅保留最后7个版本，符合ioBroker标准"
-      },
-      "1.0.16": {
-        "en": "Add eslint.config.js for ESLint 9 compatibility, fix linting warnings",
-        "de": "Füge eslint.config.js für ESLint 9 Kompatibilität hinzu, behebe Linting-Warnungen",
-        "ru": "Добавлен eslint.config.js для совместимости с ESLint 9, исправлены предупреждения линтера",
-        "fr": "Ajouter eslint.config.js pour la compatibilité ESLint 9, corriger les avertissements de linting",
-        "it": "Aggiungi eslint.config.js per la compatibilità ESLint 9, correggi gli avvisi di linting",
-        "es": "Agregar eslint.config.js para compatibilidad con ESLint 9, corregir advertencias de linting",
-        "pl": "Dodaj eslint.config.js dla kompatybilności ESLint 9, napraw ostrzeżenia lintingu",
-        "pt": "Adicionar eslint.config.js para compatibilidade ESLint 9, corrigir avisos de linting",
-        "nl": "Voeg eslint.config.js toe voor ESLint 9 compatibiliteit, corrigeer linting-waarschuwingen",
-        "zh-cn": "添加eslint.config.js以实现ESLint 9兼容性，修复linting警告"
       }
     },
     "titleLang": {
