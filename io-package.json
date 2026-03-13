@@ -1,8 +1,20 @@
 {
   "common": {
     "name": "movieswipe",
-    "version": "1.0.18",
+    "version": "1.0.19",
     "news": {
+      "1.0.19": {
+        "en": "Optimize database size from 92 MB to 38 MB (58.5% reduction). Remove unnecessary fields, truncate descriptions, limit cast. Database now compliant with GitHub size limits",
+        "de": "Datenbankgröße von 92 MB auf 38 MB optimiert (58,5% Reduktion). Entfernen Sie unnötige Felder, kürzen Sie Beschreibungen, begrenzen Sie die Besetzung. Datenbank entspricht nun GitHub-Größenlimits",
+        "ru": "Оптимизирована база данных с 92 MB до 38 MB (сокращение на 58,5%). Удалены ненужные поля, сокращены описания, ограничена информация об актерах. База теперь соответствует лимитам GitHub",
+        "fr": "Optimiser la taille de la base de données de 92 MB à 38 MB (réduction de 58,5%). Supprimer les champs inutiles, raccourcir les descriptions, limiter la distribution. La base de données est maintenant conforme aux limites de taille de GitHub",
+        "it": "Ottimizzare le dimensioni del database da 92 MB a 38 MB (riduzione del 58,5%). Rimuovere i campi non necessari, abbreviare le descrizioni, limitare il cast. Il database è ora conforme ai limiti di dimensione di GitHub",
+        "es": "Optimizar el tamaño de la base de datos de 92 MB a 38 MB (reducción del 58,5%). Eliminar campos innecesarios, acortar descripciones, limitar el elenco. La base de datos ahora cumple con los límites de tamaño de GitHub",
+        "pl": "Optymalizuj rozmiar bazy danych z 92 MB do 38 MB (zmniejszenie o 58,5%). Usuń niepotrzebne pola, skróć opisy, ogranicz obsadę. Baza danych jest teraz zgodna z limitami rozmiaru GitHub",
+        "pt": "Otimizar o tamanho do banco de dados de 92 MB para 38 MB (redução de 58,5%). Remover campos desnecessários, encurtar descrições, limitar elenco. O banco de dados agora está em conformidade com os limites de tamanho do GitHub",
+        "nl": "Optimaliseer de databasegrootte van 92 MB naar 38 MB (58,5% reductie). Verwijder onnodige velden, verkort beschrijvingen, beperk cast. Database voldoet nu aan GitHub-groottelimits",
+        "zh-cn": "将数据库大小从92 MB优化到38 MB（减少58.5%）。删除不必要的字段，缩短描述，限制演员。数据库现在符合GitHub大小限制"
+      },
       "1.0.18": {
         "en": "Update database with contentType fixes - remove tv-show and concert from content types, add concert to genres. Update sync script to handle invalid content types",
         "de": "Datenbankaktualisierung mit contentType-Fixes - entferne tv-show und concert aus Inhaltstypen, füge concert zu Genres hinzu. Aktualisiere Sync-Skript zur Behandlung ungültiger Inhaltstypen",
@@ -27,6 +39,7 @@
         "nl": "Opschoning van het nieuwsgedeelte - behoud alleen de laatste 7 versies volgens ioBroker-standaarden",
         "zh-cn": "清理新闻部分 - 仅保留最后7个版本，符合ioBroker标准"
       },
+      "1.0.16": {
         "en": "Add eslint.config.js for ESLint 9 compatibility, fix linting warnings",
         "de": "Füge eslint.config.js für ESLint 9 Kompatibilität hinzu, behebe Linting-Warnungen",
         "ru": "Добавлен eslint.config.js для совместимости с ESLint 9, исправлены предупреждения линтера",
@@ -85,30 +98,6 @@
         "pt": "Adicionar words.js para suporte multilíngue adequado na interface de administração",
         "nl": "Voeg words.js toe voor juiste meertalige ondersteuning in de admin-interface",
         "zh-cn": "添加words.js以在管理员UI中提供适当的多语言支持"
-      },
-      "1.0.11": {
-        "en": "Fix multilingual admin UI - use proper translations.json format",
-        "de": "Mehrsprachige Admin-UI korrigiert - verwende korrektes translations.json-Format",
-        "ru": "Исправлена мультиязычная админка - используется правильный формат translations.json",
-        "fr": "Interface d'administration multilingue corrigée - utilise le format translations.json correct",
-        "it": "Interfaccia amministrativa multilingue corretta - utilizza il formato translations.json corretto",
-        "es": "Interfaz de administración multilingüe corregida - utiliza el formato translations.json correcto",
-        "pl": "Naprawiony wielojęzyczny interfejs administracyjny - używa prawidłowego formatu translations.json",
-        "pt": "Interface de administração multilíngue corrigida - usa o formato translations.json correto",
-        "nl": "Meertalige admin-interface gecorrigeerd - gebruikt correct translations.json-formaat",
-        "zh-cn": "修复多语言管理员UI - 使用正确的translations.json格式"
-      },
-      "1.0.10": {
-        "en": "Fix default max requests to 250, improve HTTP 403 rate limit handling",
-        "de": "Standardmäßige maximale Anfragen auf 250 korrigiert, HTTP 403-Ratenlimit-Behandlung verbessert",
-        "ru": "Исправлено значение по умолчанию макс. запросов на 250, улучшена обработка HTTP 403 лимита",
-        "fr": "Correction des demandes maximales par défaut à 250, amélioration de la gestion du limite de débit HTTP 403",
-        "it": "Correzione delle richieste massime predefinite a 250, miglioramento della gestione del limite di velocità HTTP 403",
-        "es": "Corrección de solicitudes máximas predeterminadas a 250, mejora del manejo del límite de velocidad HTTP 403",
-        "pl": "Poprawka domyślnych maksymalnych żądań do 250, ulepszenie obsługi limitu szybkości HTTP 403",
-        "pt": "Correção de solicitações máximas padrão para 250, melhoria do tratamento do limite de taxa HTTP 403",
-        "nl": "Correctie van standaard maximale verzoeken naar 250, verbetering van HTTP 403-snelheidslimietverwerking",
-        "zh-cn": "修复默认最大请求数为250，改进HTTP 403速率限制处理"
       }
     },
     "titleLang": {
