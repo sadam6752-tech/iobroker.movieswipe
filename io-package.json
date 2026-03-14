@@ -4,16 +4,16 @@
     "version": "1.0.29",
     "news": {
       "1.0.29": {
-        "en": "Fix database reset on adapter update. Backup is now stored in iobroker-data directory (outside adapter folder) and survives adapter updates/reinstalls. No more data loss when updating the adapter.",
-        "de": "Datenbank-Reset bei Adapter-Update behoben. Backup wird jetzt im iobroker-data-Verzeichnis gespeichert (außerhalb des Adapter-Ordners) und überlebt Adapter-Updates/Neuinstallationen. Kein Datenverlust mehr beim Aktualisieren des Adapters.",
-        "ru": "Исправлен сброс базы данных при обновлении адаптера. Бэкап теперь хранится в директории iobroker-data (вне папки адаптера) и сохраняется при обновлениях/переустановках адаптера. Больше нет потери данных при обновлении адаптера.",
-        "fr": "Correction de la réinitialisation de la base de données lors de la mise à jour de l'adaptateur. La sauvegarde est maintenant stockée dans le répertoire iobroker-data (en dehors du dossier de l'adaptateur) et survit aux mises à jour/réinstallations.",
-        "it": "Correzione del ripristino del database durante l'aggiornamento dell'adattatore. Il backup è ora archiviato nella directory iobroker-data (fuori dalla cartella dell'adattatore) e sopravvive agli aggiornamenti/reinstallazioni.",
-        "es": "Corrección del restablecimiento de la base de datos al actualizar el adaptador. La copia de seguridad ahora se almacena en el directorio iobroker-data (fuera de la carpeta del adaptador) y sobrevive a las actualizaciones/reinstalaciones.",
-        "pl": "Naprawiono resetowanie bazy danych podczas aktualizacji adaptera. Kopia zapasowa jest teraz przechowywana w katalogu iobroker-data (poza folderem adaptera) i przeżywa aktualizacje/reinstalacje.",
-        "pt": "Correção da redefinição do banco de dados ao atualizar o adaptador. O backup agora é armazenado no diretório iobroker-data (fora da pasta do adaptador) e sobrevive a atualizações/reinstalações.",
-        "nl": "Databasereset bij adapter-update gecorrigeerd. Backup wordt nu opgeslagen in de iobroker-data map (buiten de adaptermap) en overleeft adapter-updates/herinstallaties.",
-        "zh-cn": "修复适配器更新时数据库重置的问题。备份现在存储在iobroker-data目录中（适配器文件夹外），在适配器更新/重新安装后仍然存在。"
+        "en": "Fix database reset on adapter update. Backup stored in iobroker-data (survives updates). Add database backup manager: download/restore via browser at http://HOST:PORT/backup.html",
+        "de": "Datenbank-Reset bei Adapter-Update behoben. Backup in iobroker-data gespeichert (überlebt Updates). Datenbank-Backup-Manager hinzugefügt: Download/Wiederherstellung über Browser unter http://HOST:PORT/backup.html",
+        "ru": "Исправлен сброс базы при обновлении адаптера. Бэкап хранится в iobroker-data (не перезаписывается при обновлениях). Добавлен менеджер бэкапов: скачать/восстановить базу через браузер по адресу http://HOST:PORT/backup.html",
+        "fr": "Correction réinitialisation base lors mise à jour. Backup dans iobroker-data (survit aux mises à jour). Gestionnaire de backup ajouté: téléchargement/restauration via navigateur http://HOST:PORT/backup.html",
+        "it": "Correzione reset database su aggiornamento. Backup in iobroker-data (sopravvive agli aggiornamenti). Aggiunto gestore backup: download/ripristino via browser http://HOST:PORT/backup.html",
+        "es": "Corrección reset base en actualización. Backup en iobroker-data (sobrevive actualizaciones). Gestor de backup añadido: descarga/restauración via navegador http://HOST:PORT/backup.html",
+        "pl": "Naprawiono reset bazy przy aktualizacji. Backup w iobroker-data (przeżywa aktualizacje). Dodano menedżer kopii zapasowych: pobieranie/przywracanie przez przeglądarkę http://HOST:PORT/backup.html",
+        "pt": "Correção reset banco na atualização. Backup em iobroker-data (sobrevive atualizações). Gerenciador de backup adicionado: download/restauração via navegador http://HOST:PORT/backup.html",
+        "nl": "Databasereset bij update gecorrigeerd. Backup in iobroker-data (overleeft updates). Backup-manager toegevoegd: download/herstel via browser http://HOST:PORT/backup.html",
+        "zh-cn": "修复适配器更新时数据库重置。备份存储在iobroker-data中（更新后仍存在）。添加备份管理器：通过浏览器下载/恢复 http://HOST:PORT/backup.html"
       },
       "1.0.28": {
         "en": "Fix API key rotation: automatically switch to next key when daily limit is reached. No manual re-trigger needed - adapter continues sync with next available key automatically.",

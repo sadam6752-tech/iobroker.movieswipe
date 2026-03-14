@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MovieSwipe — Database Backup</title>
+  <style>
+    body { font-family: sans-serif; max-width: 600px; margin: 40px auto; padding: 0 20px; background: #1a1a2e; color: #eee; }
+    h1 { color: #e94560; }
+    .card { background: #16213e; border-radius: 8px; padding: 20px; margin: 20px 0; }
+    h2 { margin-top: 0; font-size: 1rem; color: #a8b2d8; text-transform: uppercase; letter-spacing: 1px; }
+    a.btn, button { display: inline-block; padding: 10px 20px; border-radius: 6px; border: none; cursor: pointer; font-size: 1rem; text-decoration: none; }
+    .btn-download { background: #0f3460; color: #fff; }
+    .btn-download:hover { background: #1a5276; }
+    .btn-upload { background: #e94560; color: #fff; }
+    .btn-upload:hover { background: #c0392b; }
+    input[type=file] { display: block; margin: 12px 0; color: #aaa; }
+    #status { margin-top: 12px; padding: 10px; border-radius: 6px; display: none; }
+    #status.ok { background: #1e8449; }
+    #status.err { background: #922b21; }
+    #dbInfo { font-size: 0.9rem; color: #a8b2d8; margin-top: 8px; }
+  </style>
+</head>
+<body>
+  <h1>🎬 MovieSwipe Database</h1>
+
+  <div class="card">
+    <h2>📊 Current Database</h2>
+    <div id="dbInfo">Loading...</div>
+  </div>
+
+  <div class="card">
+    <h2>⬇ Download Backup</h2>
+    <p>Download the current database as a JSON file to your computer.</p>
+    <a class="btn btn-download" href="/api/db/download">Download database backup</a>
+  </div>
+
+  <div class="card">
+    <h2>⬆ Restore from Backup</h2>
+    <p>Upload a previously downloaded backup file to restore the database.</p>
+    <input type="file" id="fileInput" accept=".json">
+    <button class="btn btn-upload" onclick="uploadBackup()">Restore database</button>
+    <div id="status"></div>
+  </div>
+
+  <script>
+    // Загрузить информацию о базе
+    fetch('/api/db/info')
+      .then(r => r.json())
+      .then(d => {
+        const el = document.getElementById('dbInfo');
+        if (d.exists) {
+          el.innerHTML = `Movies: <strong>${d.movies.toLocaleString()}</strong> &nbsp;|&nbsp; Size: <strong>${d.sizeMB} MB</strong> &nbsp;|&nbsp; Modified: <strong>${new Date(d.modified).toLocaleString()}</strong>`;
+        } else {
+          el.textContent = 'Database file not found';
+        }
+      })
+      .catch(() => { document.getElementById('dbInfo').textContent = 'Could not load database info'; });
+
+    function uploadBackup() {
+      const file = document.getElementById('fileInput').files[0];
+      const status = document.getElementById('status');
+      if (!file) { showStatus('Please select a file first', false); return; }
+
+      const formData = new FormData();
+      formData.append('database', file);
+
+      showStatus('Uploading...', null);
+
+      fetch('/api/db/upload', { method: 'POST', body: formData })
+        .then(r => r.json())
+        .then(d => {
+          if (d.success) {
+            showStatus(`✓ Restored successfully! ${d.movies.toLocaleString()} movies loaded. Refresh the app (F5) to see changes.`, true);
+            // Обновить инфо
+            setTimeout(() => location.reload(), 2000);
+          } else {
+            showStatus(`✗ Error: ${d.error}`, false);
+          }
+        })
+        .catch(e => showStatus(`✗ Upload failed: ${e.message}`, false));
+    }
+
+    function showStatus(msg, ok) {
+      const el = document.getElementById('status');
+      el.textContent = msg;
+      el.style.display = 'block';
+      el.className = ok === true ? 'ok' : ok === false ? 'err' : '';
+    }
+  </script>
+</body>
+</html>
