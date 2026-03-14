@@ -1,8 +1,20 @@
 {
   "common": {
     "name": "movieswipe",
-    "version": "1.0.28",
+    "version": "1.0.29",
     "news": {
+      "1.0.29": {
+        "en": "Fix database reset on adapter update. Backup is now stored in iobroker-data directory (outside adapter folder) and survives adapter updates/reinstalls. No more data loss when updating the adapter.",
+        "de": "Datenbank-Reset bei Adapter-Update behoben. Backup wird jetzt im iobroker-data-Verzeichnis gespeichert (außerhalb des Adapter-Ordners) und überlebt Adapter-Updates/Neuinstallationen. Kein Datenverlust mehr beim Aktualisieren des Adapters.",
+        "ru": "Исправлен сброс базы данных при обновлении адаптера. Бэкап теперь хранится в директории iobroker-data (вне папки адаптера) и сохраняется при обновлениях/переустановках адаптера. Больше нет потери данных при обновлении адаптера.",
+        "fr": "Correction de la réinitialisation de la base de données lors de la mise à jour de l'adaptateur. La sauvegarde est maintenant stockée dans le répertoire iobroker-data (en dehors du dossier de l'adaptateur) et survit aux mises à jour/réinstallations.",
+        "it": "Correzione del ripristino del database durante l'aggiornamento dell'adattatore. Il backup è ora archiviato nella directory iobroker-data (fuori dalla cartella dell'adattatore) e sopravvive agli aggiornamenti/reinstallazioni.",
+        "es": "Corrección del restablecimiento de la base de datos al actualizar el adaptador. La copia de seguridad ahora se almacena en el directorio iobroker-data (fuera de la carpeta del adaptador) y sobrevive a las actualizaciones/reinstalaciones.",
+        "pl": "Naprawiono resetowanie bazy danych podczas aktualizacji adaptera. Kopia zapasowa jest teraz przechowywana w katalogu iobroker-data (poza folderem adaptera) i przeżywa aktualizacje/reinstalacje.",
+        "pt": "Correção da redefinição do banco de dados ao atualizar o adaptador. O backup agora é armazenado no diretório iobroker-data (fora da pasta do adaptador) e sobrevive a atualizações/reinstalações.",
+        "nl": "Databasereset bij adapter-update gecorrigeerd. Backup wordt nu opgeslagen in de iobroker-data map (buiten de adaptermap) en overleeft adapter-updates/herinstallaties.",
+        "zh-cn": "修复适配器更新时数据库重置的问题。备份现在存储在iobroker-data目录中（适配器文件夹外），在适配器更新/重新安装后仍然存在。"
+      },
       "1.0.28": {
         "en": "Fix API key rotation: automatically switch to next key when daily limit is reached. No manual re-trigger needed - adapter continues sync with next available key automatically.",
         "de": "API-Schlüsselrotation korrigiert: automatischer Wechsel zum nächsten Schlüssel bei Erreichen des Tageslimits. Kein manuelles Neu-Triggern nötig - Adapter setzt Sync mit nächstem verfügbaren Schlüssel fort.",
@@ -74,18 +86,6 @@
         "pt": "Corrigir mapeamentos de script de sincronização e atualizar banco de dados. Remover entradas GENRE_MAP duplicadas. Remover tipo de conteúdo tv-show inválido. Adicionar suporte ao gênero de concerto. Novo banco de dados limpo com todas as correções aplicadas.",
         "nl": "Synchronisatiescript-mappings gecorrigeerd en database bijgewerkt. Dubbele GENRE_MAP-vermeldingen verwijderd. Ongeldig tv-show-inhoudstype verwijderd. Concertgenre-ondersteuning toegevoegd. Nieuwe schone database met alle correcties toegepast.",
         "zh-cn": "修复同步脚本映射并更新数据库。删除重复的GENRE_MAP条目。删除无效的tv-show内容类型。添加音乐会类型支持。应用所有修复的新干净数据库。"
-      },
-      "1.0.22": {
-        "en": "Add API key rotation for multiple keys. Display actual movie count in admin UI. Fix concert genre mapping in sync script.",
-        "de": "API-Schlüsselrotation für mehrere Schlüssel hinzugefügt. Tatsächliche Filmanzahl in Admin-UI anzeigen. Konzertgenre-Zuordnung im Sync-Skript korrigiert.",
-        "ru": "Добавлена ротация API ключей для нескольких ключей. Отображение актуального количества фильмов в админке. Исправлен маппинг жанра концерт в скрипте синхронизации.",
-        "fr": "Ajout de la rotation des clés API pour plusieurs clés. Afficher le nombre réel de films dans l'interface d'administration. Correction du mappage du genre concert dans le script de synchronisation.",
-        "it": "Aggiunta rotazione chiavi API per più chiavi. Visualizzare il conteggio effettivo dei film nell'interfaccia di amministrazione. Correzione mappatura genere concerto nello script di sincronizzazione.",
-        "es": "Agregar rotación de claves API para múltiples claves. Mostrar el recuento real de películas en la interfaz de administración. Corregir mapeo de género de concierto en script de sincronización.",
-        "pl": "Dodano rotację kluczy API dla wielu kluczy. Wyświetlanie rzeczywistej liczby filmów w interfejsie administratora. Naprawiono mapowanie gatunku koncertowego w skrypcie synchronizacji.",
-        "pt": "Adicionar rotação de chaves API para várias chaves. Exibir contagem real de filmes na interface de administração. Corrigir mapeamento de gênero de concerto no script de sincronização.",
-        "nl": "API-sleutelrotatie voor meerdere sleutels toegevoegd. Werkelijk aantal films weergeven in beheerinterface. Concertgenre-mapping in synchronisatiescript gecorrigeerd.",
-        "zh-cn": "为多个密钥添加API密钥轮换。在管理界面中显示实际电影数量。修复同步脚本中的音乐会类型映射。"
       }
     },
     "titleLang": {

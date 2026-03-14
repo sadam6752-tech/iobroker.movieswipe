@@ -21,9 +21,16 @@ class MovieSwipe extends utils.Adapter {
     this.on('unload', this.onUnload.bind(this));
   }
 
+  getBackupPath() {
+    // Хранить бэкап в iobroker-data — эта директория НЕ перезаписывается при обновлении адаптера
+    const dataDir = utils.getAbsoluteDefaultDataDir();
+    const backupDir = path.join(dataDir, this.namespace);
+    return { backupDir, backupPath: path.join(backupDir, 'movies-poiskkino.backup.json') };
+  }
+
   async handleDatabasePreservation() {
     const dbPath = path.join(__dirname, 'www/data/movies-poiskkino.json');
-    const backupPath = path.join(__dirname, 'www/data/movies-poiskkino.backup.json');
+    const { backupDir, backupPath } = this.getBackupPath();
 
     try {
       if (this.config.preserveDatabase !== false) {
@@ -34,14 +41,14 @@ class MovieSwipe extends utils.Adapter {
 
           // Восстанавливаем если резервная копия новее или больше текущей базы
           if (!dbStat || backupStat.size > dbStat.size || backupStat.mtimeMs > dbStat.mtimeMs) {
-            this.log.info(`Restoring database from backup (backup: ${Math.round(backupStat.size / 1024 / 1024)}MB)`);
+            this.log.info(`Restoring database from backup (${Math.round(backupStat.size / 1024 / 1024)}MB) at ${backupPath}`);
             fs.copyFileSync(backupPath, dbPath);
             this.log.info('Database restored from backup successfully');
           } else {
             this.log.info('Current database is up to date, backup not needed');
           }
         } else {
-          this.log.info('No backup found, will create one after first sync');
+          this.log.info(`No backup found at ${backupPath}, will create one after first sync`);
         }
       } else {
         this.log.info('Database preservation is disabled');
@@ -87,7 +94,8 @@ class MovieSwipe extends utils.Adapter {
 
     // Инициализировать sync manager
     try {
-      this.syncManager = new SyncManager(this);
+      const { backupDir, backupPath } = this.getBackupPath();
+      this.syncManager = new SyncManager(this, backupDir, backupPath);
     } catch (error) {
       this.log.error(`Failed to initialize sync manager: ${error.message}`);
     }
