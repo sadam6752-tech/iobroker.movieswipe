@@ -74,10 +74,11 @@ class MovieSwipe extends utils.Adapter {
     // Инициализировать веб-сервер
     try {
       const port = this.config.port || 3000;
+      const bind = this.config.bind || '0.0.0.0';
       const wwwPath = `${__dirname}/www`;
 
       this.webServer = new WebServer(this);
-      await this.webServer.start(port, wwwPath);
+      await this.webServer.start(port, wwwPath, bind);
 
       // Обновить states сервера
       await this.setStateAsync('server.port', port, true);

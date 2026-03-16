@@ -1,8 +1,20 @@
 {
   "common": {
     "name": "movieswipe",
-    "version": "1.0.31",
+    "version": "1.0.32",
     "news": {
+      "1.0.32": {
+        "en": "Add bind IP address setting. Select specific network interface for the web server in adapter settings (General tab).",
+        "de": "IP-Bind-Einstellung hinzugefügt. Netzwerkschnittstelle für den Webserver in den Adaptereinstellungen (Allgemein) auswählen.",
+        "ru": "Добавлена настройка IP-адреса привязки. Выберите сетевой интерфейс для веб-сервера в настройках адаптера (вкладка Общие).",
+        "fr": "Ajout du paramètre d'adresse IP de liaison. Sélectionnez l'interface réseau pour le serveur web dans les paramètres de l'adaptateur.",
+        "it": "Aggiunta impostazione indirizzo IP di binding. Seleziona l'interfaccia di rete per il server web nelle impostazioni dell'adattatore.",
+        "es": "Añadida configuración de dirección IP de enlace. Seleccione la interfaz de red para el servidor web en la configuración del adaptador.",
+        "pl": "Dodano ustawienie adresu IP powiązania. Wybierz interfejs sieciowy dla serwera web w ustawieniach adaptera.",
+        "pt": "Adicionada configuração de endereço IP de ligação. Selecione a interface de rede para o servidor web nas configurações do adaptador.",
+        "nl": "Bind IP-adresinstelling toegevoegd. Selecteer netwerkinterface voor de webserver in de adapterinstellingen.",
+        "zh-cn": "添加绑定IP地址设置。在适配器设置中选择Web服务器的网络接口。"
+      },
       "1.0.31": {
         "en": "Fix sync script crashing on network errors. Added retry logic (3 attempts: 5s, 15s, 30s) and 30s timeout per request. Network errors now exit with code 0 so adapter does not report false failures.",
         "de": "Sync-Skript stürzt bei Netzwerkfehlern nicht mehr ab. Retry-Logik hinzugefügt (3 Versuche: 5s, 15s, 30s) und 30s Timeout pro Anfrage. Netzwerkfehler beenden mit Code 0.",
@@ -74,18 +86,6 @@
         "pt": "Correção do script de sincronização que salvava filmes no diretório errado. Os filmes encontrados durante a sincronização agora são adicionados corretamente ao banco de dados.",
         "nl": "Synchronisatiescript gecorrigeerd dat films in de verkeerde map opsloeg. Films gevonden tijdens synchronisatie worden nu correct toegevoegd aan de database.",
         "zh-cn": "修复同步脚本将电影保存到错误目录的问题。同步期间找到的电影现在正确添加到数据库中。"
-      },
-      "1.0.23": {
-        "en": "Fix sync script mappings and update database. Remove duplicate GENRE_MAP entries. Remove invalid tv-show content type. Add concert genre support. New clean database with all fixes applied.",
-        "de": "Sync-Skript-Zuordnungen korrigiert und Datenbank aktualisiert. Doppelte GENRE_MAP-Einträge entfernt. Ungültigen tv-show-Inhaltstyp entfernt. Konzertgenre-Unterstützung hinzugefügt. Neue saubere Datenbank mit allen Korrekturen.",
-        "ru": "Исправлены маппинги в скрипте синхронизации и обновлена база данных. Удалены дубликаты в GENRE_MAP. Удален невалидный тип контента tv-show. Добавлена поддержка жанра концерт. Новая чистая база со всеми исправлениями.",
-        "fr": "Correction des mappages de script de synchronisation et mise à jour de la base de données. Suppression des entrées GENRE_MAP en double. Suppression du type de contenu tv-show invalide. Ajout de la prise en charge du genre concert. Nouvelle base de données propre avec toutes les corrections appliquées.",
-        "it": "Correzione mappature script di sincronizzazione e aggiornamento database. Rimosse voci GENRE_MAP duplicate. Rimosso tipo di contenuto tv-show non valido. Aggiunto supporto genere concerto. Nuovo database pulito con tutte le correzioni applicate.",
-        "es": "Corregir mapeos de script de sincronización y actualizar base de datos. Eliminar entradas GENRE_MAP duplicadas. Eliminar tipo de contenido tv-show no válido. Agregar soporte de género de concierto. Nueva base de datos limpia con todas las correcciones aplicadas.",
-        "pl": "Naprawiono mapowania skryptu synchronizacji i zaktualizowano bazę danych. Usunięto zduplikowane wpisy GENRE_MAP. Usunięto nieprawidłowy typ zawartości tv-show. Dodano obsługę gatunku koncertowego. Nowa czysta baza danych ze wszystkimi poprawkami.",
-        "pt": "Corrigir mapeamentos de script de sincronização e atualizar banco de dados. Remover entradas GENRE_MAP duplicadas. Remover tipo de conteúdo tv-show inválido. Adicionar suporte ao gênero de concerto. Novo banco de dados limpo com todas as correções aplicadas.",
-        "nl": "Synchronisatiescript-mappings gecorrigeerd en database bijgewerkt. Dubbele GENRE_MAP-vermeldingen verwijderd. Ongeldig tv-show-inhoudstype verwijderd. Concertgenre-ondersteuning toegevoegd. Nieuwe schone database met alle correcties toegepast.",
-        "zh-cn": "修复同步脚本映射并更新数据库。删除重复的GENRE_MAP条目。删除无效的tv-show内容类型。添加音乐会类型支持。应用所有修复的新干净数据库。"
       }
     },
     "titleLang": {
@@ -154,6 +154,7 @@
   },
   "native": {
     "port": 3000,
+    "bind": "0.0.0.0",
     "apiKeys": [],
     "minRating": 5.0,
     "maxRating": 10.0,

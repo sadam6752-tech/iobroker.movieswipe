@@ -11,6 +11,18 @@
           "text": "Web Server",
           "size": 3
         },
+        "bind": {
+          "type": "interface",
+          "label": "Bind IP address",
+          "help": "Network interface to bind the web server to. Use 0.0.0.0 to listen on all interfaces.",
+          "ignoreLoopback": false,
+          "ignoreInternal": false,
+          "xs": 12,
+          "sm": 12,
+          "md": 6,
+          "lg": 4,
+          "xl": 4
+        },
         "port": {
           "type": "number",
           "label": "Port",
