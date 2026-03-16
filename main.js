@@ -62,6 +62,40 @@ class MovieSwipe extends utils.Adapter {
     }
   }
 
+  /**
+   * Резолвить IP адрес из имени интерфейса или вернуть как есть если уже IP
+   */
+  resolveBindAddress(bind) {
+    const os = require('os');
+    if (!bind || bind === '0.0.0.0' || bind === '::') {
+      // Слушаем на всех — вернуть первый не-loopback IPv4
+      const interfaces = os.networkInterfaces();
+      for (const iface of Object.values(interfaces)) {
+        for (const addr of iface) {
+          if (addr.family === 'IPv4' && !addr.internal) {
+            return addr.address;
+          }
+        }
+      }
+      return '127.0.0.1';
+    }
+    // Проверить — это уже IP адрес?
+    if (/^\d+\.\d+\.\d+\.\d+$/.test(bind) || bind.includes(':')) {
+      return bind;
+    }
+    // Это имя интерфейса — найти его IP
+    const interfaces = os.networkInterfaces();
+    const iface = interfaces[bind];
+    if (iface) {
+      const ipv4 = iface.find(a => a.family === 'IPv4');
+      if (ipv4) return ipv4.address;
+      const ipv6 = iface.find(a => a.family === 'IPv6' && !a.internal);
+      if (ipv6) return ipv6.address;
+    }
+    this.log.warn(`Could not resolve IP for interface "${bind}", falling back to 0.0.0.0`);
+    return '0.0.0.0';
+  }
+
   async onReady() {
     this.log.info('MovieSwipe adapter starting...');
 
@@ -75,6 +109,7 @@ class MovieSwipe extends utils.Adapter {
     try {
       const port = this.config.port || 3000;
       const bind = this.config.bind || '0.0.0.0';
+      const resolvedIp = this.resolveBindAddress(bind);
       const wwwPath = `${__dirname}/www`;
 
       this.webServer = new WebServer(this);
@@ -82,11 +117,12 @@ class MovieSwipe extends utils.Adapter {
 
       // Обновить states сервера
       await this.setStateAsync('server.port', port, true);
-      await this.setStateAsync('server.url', this.webServer.getUrl(), true);
+      await this.setStateAsync('server.ip', resolvedIp, true);
+      await this.setStateAsync('server.url', `http://${resolvedIp}:${port}`, true);
       await this.setStateAsync('server.running', true, true);
       await this.setStateAsync('info.connection', true, true);
 
-      this.log.info(`Web server started at ${this.webServer.getUrl()}`);
+      this.log.info(`Web server started at http://${resolvedIp}:${port} (bind: ${bind})`);
     } catch (error) {
       this.log.error(`Failed to start web server: ${error.message}`);
       await this.setStateAsync('server.running', false, true);

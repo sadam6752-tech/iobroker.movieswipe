@@ -1,91 +1,91 @@
 {
   "common": {
     "name": "movieswipe",
-    "version": "1.0.33",
+    "version": "1.0.34",
     "news": {
+      "1.0.34": {
+        "en": "Fix Status tab URLs: server.url and backup URLs now show real resolved IP instead of interface name.",
+        "de": "Status-Tab URLs korrigiert: server.url und Backup-URLs zeigen jetzt die echte aufgelöste IP statt des Schnittstellennamens.",
+        "ru": "Исправлены URL во вкладке Статус: server.url и URL бэкапа теперь показывают реальный IP вместо имени интерфейса.",
+        "fr": "Correction des URLs de l'onglet Statut: server.url et les URLs de backup affichent maintenant l'IP reelle au lieu du nom d'interface.",
+        "it": "Correzione URL scheda Stato: server.url e URL backup ora mostrano l'IP reale invece del nome dell'interfaccia.",
+        "es": "Correccion de URLs en pestana Estado: server.url y URLs de backup ahora muestran la IP real en lugar del nombre de interfaz.",
+        "pl": "Poprawiono URL w zakladce Status: server.url i URL kopii zapasowej teraz pokazuja rzeczywisty IP zamiast nazwy interfejsu.",
+        "pt": "Correcao de URLs na aba Status: server.url e URLs de backup agora mostram o IP real em vez do nome da interface.",
+        "nl": "Status-tabblad URL's gecorrigeerd: server.url en backup-URL's tonen nu het echte opgeloste IP in plaats van de interfacenaam.",
+        "zh-cn": "修复状态选项卡URL：server.url和备份URL现在显示真实解析的IP而不是接口名称。"
+      },
       "1.0.33": {
         "en": "Status tab now shows dynamic URLs based on configured bind IP and port settings.",
         "de": "Status-Tab zeigt jetzt dynamische URLs basierend auf den konfigurierten Bind-IP- und Port-Einstellungen.",
         "ru": "Вкладка Статус теперь показывает динамические URL на основе настроенных IP и порта.",
-        "fr": "L'onglet Statut affiche maintenant des URLs dynamiques basées sur l'IP et le port configurés.",
+        "fr": "L'onglet Statut affiche maintenant des URLs dynamiques basees sur l'IP et le port configures.",
         "it": "La scheda Stato ora mostra URL dinamici basati sull'IP e la porta configurati.",
-        "es": "La pestaña Estado ahora muestra URLs dinámicas basadas en la IP y el puerto configurados.",
-        "pl": "Zakładka Status teraz pokazuje dynamiczne URL na podstawie skonfigurowanego IP i portu.",
-        "pt": "A aba Status agora mostra URLs dinâmicas baseadas no IP e porta configurados.",
+        "es": "La pestana Estado ahora muestra URLs dinamicas basadas en la IP y el puerto configurados.",
+        "pl": "Zakladka Status teraz pokazuje dynamiczne URL na podstawie skonfigurowanego IP i portu.",
+        "pt": "A aba Status agora mostra URLs dinamicas baseadas no IP e porta configurados.",
         "nl": "Status-tabblad toont nu dynamische URL's op basis van geconfigureerd bind-IP en poort.",
         "zh-cn": "状态选项卡现在根据配置的绑定IP和端口显示动态URL。"
       },
       "1.0.32": {
         "en": "Add bind IP address setting. Select specific network interface for the web server in adapter settings (General tab).",
-        "de": "IP-Bind-Einstellung hinzugefügt. Netzwerkschnittstelle für den Webserver in den Adaptereinstellungen (Allgemein) auswählen.",
+        "de": "IP-Bind-Einstellung hinzugefugt. Netzwerkschnittstelle fur den Webserver in den Adaptereinstellungen (Allgemein) auswahlen.",
         "ru": "Добавлена настройка IP-адреса привязки. Выберите сетевой интерфейс для веб-сервера в настройках адаптера (вкладка Общие).",
-        "fr": "Ajout du paramètre d'adresse IP de liaison. Sélectionnez l'interface réseau pour le serveur web dans les paramètres de l'adaptateur.",
+        "fr": "Ajout du parametre d'adresse IP de liaison. Selectionnez l'interface reseau pour le serveur web dans les parametres de l'adaptateur.",
         "it": "Aggiunta impostazione indirizzo IP di binding. Seleziona l'interfaccia di rete per il server web nelle impostazioni dell'adattatore.",
-        "es": "Añadida configuración de dirección IP de enlace. Seleccione la interfaz de red para el servidor web en la configuración del adaptador.",
-        "pl": "Dodano ustawienie adresu IP powiązania. Wybierz interfejs sieciowy dla serwera web w ustawieniach adaptera.",
-        "pt": "Adicionada configuração de endereço IP de ligação. Selecione a interface de rede para o servidor web nas configurações do adaptador.",
+        "es": "Anadida configuracion de direccion IP de enlace. Seleccione la interfaz de red para el servidor web en la configuracion del adaptador.",
+        "pl": "Dodano ustawienie adresu IP powiazania. Wybierz interfejs sieciowy dla serwera web w ustawieniach adaptera.",
+        "pt": "Adicionada configuracao de endereco IP de ligacao. Selecione a interface de rede para o servidor web nas configuracoes do adaptador.",
         "nl": "Bind IP-adresinstelling toegevoegd. Selecteer netwerkinterface voor de webserver in de adapterinstellingen.",
         "zh-cn": "添加绑定IP地址设置。在适配器设置中选择Web服务器的网络接口。"
       },
       "1.0.31": {
         "en": "Fix sync script crashing on network errors. Added retry logic (3 attempts: 5s, 15s, 30s) and 30s timeout per request. Network errors now exit with code 0 so adapter does not report false failures.",
-        "de": "Sync-Skript stürzt bei Netzwerkfehlern nicht mehr ab. Retry-Logik hinzugefügt (3 Versuche: 5s, 15s, 30s) und 30s Timeout pro Anfrage. Netzwerkfehler beenden mit Code 0.",
-        "ru": "Исправлено падение скрипта синхронизации при сетевых ошибках. Добавлен retry (3 попытки: 5с, 15с, 30с) и timeout 30с на запрос. Сетевые ошибки завершаются с кодом 0 — адаптер не сообщает о ложных сбоях.",
-        "fr": "Correction du crash du script de synchronisation sur les erreurs réseau. Logique de retry ajoutée (3 tentatives: 5s, 15s, 30s) et timeout 30s par requête.",
+        "de": "Sync-Skript sturzt bei Netzwerkfehlern nicht mehr ab. Retry-Logik hinzugefugt (3 Versuche: 5s, 15s, 30s) und 30s Timeout pro Anfrage. Netzwerkfehler beenden mit Code 0.",
+        "ru": "Исправлено падение скрипта синхронизации при сетевых ошибках. Добавлен retry (3 попытки: 5с, 15с, 30с) и timeout 30с на запрос. Сетевые ошибки завершаются с кодом 0.",
+        "fr": "Correction du crash du script de synchronisation sur les erreurs reseau. Logique de retry ajoutee (3 tentatives: 5s, 15s, 30s) et timeout 30s par requete.",
         "it": "Correzione crash script sync su errori di rete. Aggiunta logica retry (3 tentativi: 5s, 15s, 30s) e timeout 30s per richiesta.",
-        "es": "Corrección de caída del script de sincronización en errores de red. Lógica de reintento añadida (3 intentos: 5s, 15s, 30s) y timeout 30s por solicitud.",
-        "pl": "Naprawiono crash skryptu sync przy błędach sieciowych. Dodano logikę retry (3 próby: 5s, 15s, 30s) i timeout 30s na żądanie.",
-        "pt": "Correção de crash do script de sincronização em erros de rede. Lógica de retry adicionada (3 tentativas: 5s, 15s, 30s) e timeout 30s por requisição.",
+        "es": "Correccion de caida del script de sincronizacion en errores de red. Logica de reintento anadida (3 intentos: 5s, 15s, 30s) y timeout 30s por solicitud.",
+        "pl": "Naprawiono crash skryptu sync przy bledach sieciowych. Dodano logike retry (3 proby: 5s, 15s, 30s) i timeout 30s na zadanie.",
+        "pt": "Correcao de crash do script de sincronizacao em erros de rede. Logica de retry adicionada (3 tentativas: 5s, 15s, 30s) e timeout 30s por requisicao.",
         "nl": "Crash van synchronisatiescript bij netwerkfouten gecorrigeerd. Retry-logica toegevoegd (3 pogingen: 5s, 15s, 30s) en 30s timeout per verzoek.",
         "zh-cn": "修复同步脚本在网络错误时崩溃的问题。添加重试逻辑（3次尝试：5s、15s、30s）和每个请求30s超时。"
       },
       "1.0.30": {
         "en": "Fix SyntaxError in web-server.js (missing closing brace in _setupDatabaseApi). Adapter now starts correctly.",
-        "de": "SyntaxError in web-server.js behoben (fehlende schließende Klammer in _setupDatabaseApi). Adapter startet jetzt korrekt.",
+        "de": "SyntaxError in web-server.js behoben (fehlende schliessende Klammer in _setupDatabaseApi). Adapter startet jetzt korrekt.",
         "ru": "Исправлена синтаксическая ошибка в web-server.js (пропущена закрывающая скобка в _setupDatabaseApi). Адаптер теперь запускается корректно.",
-        "fr": "Correction SyntaxError dans web-server.js. L'adaptateur démarre maintenant correctement.",
+        "fr": "Correction SyntaxError dans web-server.js. L'adaptateur demarre maintenant correctement.",
         "it": "Correzione SyntaxError in web-server.js. L'adattatore ora si avvia correttamente.",
-        "es": "Corrección SyntaxError en web-server.js. El adaptador ahora inicia correctamente.",
-        "pl": "Naprawiono SyntaxError w web-server.js. Adapter teraz uruchamia się poprawnie.",
-        "pt": "Correção SyntaxError em web-server.js. O adaptador agora inicia corretamente.",
+        "es": "Correccion SyntaxError en web-server.js. El adaptador ahora inicia correctamente.",
+        "pl": "Naprawiono SyntaxError w web-server.js. Adapter teraz uruchamia sie poprawnie.",
+        "pt": "Correcao SyntaxError em web-server.js. O adaptador agora inicia corretamente.",
         "nl": "SyntaxError in web-server.js gecorrigeerd. Adapter start nu correct.",
         "zh-cn": "修复web-server.js中的SyntaxError。适配器现在可以正确启动。"
       },
       "1.0.29": {
         "en": "Fix database reset on adapter update. Backup stored in iobroker-data (survives updates). Add database backup manager: download/restore via browser at http://HOST:PORT/backup.html",
-        "de": "Datenbank-Reset bei Adapter-Update behoben. Backup in iobroker-data gespeichert (überlebt Updates). Datenbank-Backup-Manager hinzugefügt: Download/Wiederherstellung über Browser unter http://HOST:PORT/backup.html",
-        "ru": "Исправлен сброс базы при обновлении адаптера. Бэкап хранится в iobroker-data (не перезаписывается при обновлениях). Добавлен менеджер бэкапов: скачать/восстановить базу через браузер по адресу http://HOST:PORT/backup.html",
-        "fr": "Correction réinitialisation base lors mise à jour. Backup dans iobroker-data (survit aux mises à jour). Gestionnaire de backup ajouté: téléchargement/restauration via navigateur http://HOST:PORT/backup.html",
-        "it": "Correzione reset database su aggiornamento. Backup in iobroker-data (sopravvive agli aggiornamenti). Aggiunto gestore backup: download/ripristino via browser http://HOST:PORT/backup.html",
-        "es": "Corrección reset base en actualización. Backup en iobroker-data (sobrevive actualizaciones). Gestor de backup añadido: descarga/restauración via navegador http://HOST:PORT/backup.html",
-        "pl": "Naprawiono reset bazy przy aktualizacji. Backup w iobroker-data (przeżywa aktualizacje). Dodano menedżer kopii zapasowych: pobieranie/przywracanie przez przeglądarkę http://HOST:PORT/backup.html",
-        "pt": "Correção reset banco na atualização. Backup em iobroker-data (sobrevive atualizações). Gerenciador de backup adicionado: download/restauração via navegador http://HOST:PORT/backup.html",
-        "nl": "Databasereset bij update gecorrigeerd. Backup in iobroker-data (overleeft updates). Backup-manager toegevoegd: download/herstel via browser http://HOST:PORT/backup.html",
-        "zh-cn": "修复适配器更新时数据库重置。备份存储在iobroker-data中（更新后仍存在）。添加备份管理器：通过浏览器下载/恢复 http://HOST:PORT/backup.html"
+        "de": "Datenbank-Reset bei Adapter-Update behoben. Backup in iobroker-data gespeichert. Datenbank-Backup-Manager hinzugefugt: Download/Wiederherstellung uber Browser.",
+        "ru": "Исправлен сброс базы при обновлении адаптера. Бэкап хранится в iobroker-data. Добавлен менеджер бэкапов: скачать/восстановить базу через браузер.",
+        "fr": "Correction reinitialisation base lors mise a jour. Backup dans iobroker-data. Gestionnaire de backup ajoute: telechargement/restauration via navigateur.",
+        "it": "Correzione reset database su aggiornamento. Backup in iobroker-data. Aggiunto gestore backup: download/ripristino via browser.",
+        "es": "Correccion reset base en actualizacion. Backup en iobroker-data. Gestor de backup anadido: descarga/restauracion via navegador.",
+        "pl": "Naprawiono reset bazy przy aktualizacji. Backup w iobroker-data. Dodano menedzera kopii zapasowych: pobieranie/przywracanie przez przegladarke.",
+        "pt": "Correcao reset banco na atualizacao. Backup em iobroker-data. Gerenciador de backup adicionado: download/restauracao via navegador.",
+        "nl": "Databasereset bij update gecorrigeerd. Backup in iobroker-data. Backup-manager toegevoegd: download/herstel via browser.",
+        "zh-cn": "修复适配器更新时数据库重置。备份存储在iobroker-data中。添加备份管理器：通过浏览器下载/恢复。"
       },
       "1.0.28": {
-        "en": "Fix API key rotation: automatically switch to next key when daily limit is reached. No manual re-trigger needed - adapter continues sync with next available key automatically.",
-        "de": "API-Schlüsselrotation korrigiert: automatischer Wechsel zum nächsten Schlüssel bei Erreichen des Tageslimits. Kein manuelles Neu-Triggern nötig - Adapter setzt Sync mit nächstem verfügbaren Schlüssel fort.",
-        "ru": "Исправлена ротация API ключей: автоматическое переключение на следующий ключ при достижении дневного лимита. Не нужно запускать синхронизацию вручную — адаптер продолжает с следующим доступным ключом.",
-        "fr": "Correction de la rotation des clés API: passage automatique à la clé suivante lorsque la limite quotidienne est atteinte.",
+        "en": "Fix API key rotation: automatically switch to next key when daily limit is reached. No manual re-trigger needed.",
+        "de": "API-Schlusselrotation korrigiert: automatischer Wechsel zum nachsten Schlussel bei Erreichen des Tageslimits.",
+        "ru": "Исправлена ротация API ключей: автоматическое переключение на следующий ключ при достижении дневного лимита.",
+        "fr": "Correction de la rotation des cles API: passage automatique a la cle suivante lorsque la limite quotidienne est atteinte.",
         "it": "Correzione rotazione chiavi API: passaggio automatico alla chiave successiva al raggiungimento del limite giornaliero.",
-        "es": "Corrección de rotación de claves API: cambio automático a la siguiente clave al alcanzar el límite diario.",
-        "pl": "Naprawiono rotację kluczy API: automatyczne przełączenie na następny klucz po osiągnięciu dziennego limitu.",
-        "pt": "Correção da rotação de chaves API: troca automática para a próxima chave ao atingir o limite diário.",
+        "es": "Correccion de rotacion de claves API: cambio automatico a la siguiente clave al alcanzar el limite diario.",
+        "pl": "Naprawiono rotacje kluczy API: automatyczne przelaczenie na nastepny klucz po osiagnieciu dziennego limitu.",
+        "pt": "Correcao da rotacao de chaves API: troca automatica para a proxima chave ao atingir o limite diario.",
         "nl": "API-sleutelrotatie gecorrigeerd: automatisch overschakelen naar volgende sleutel bij bereiken dagelijks limiet.",
         "zh-cn": "修复API密钥轮换：达到每日限制时自动切换到下一个密钥。"
-      },
-      "1.0.27": {
-        "en": "Fix database reset on adapter restart. Database is now backed up to movies-poiskkino.backup.json after each sync and restored on startup. No more data loss when restarting the adapter.",
-        "de": "Datenbank-Reset beim Neustart des Adapters behoben. Datenbank wird nach jeder Synchronisierung in movies-poiskkino.backup.json gesichert und beim Start wiederhergestellt. Kein Datenverlust mehr beim Neustart.",
-        "ru": "Исправлен сброс базы данных при перезапуске адаптера. База теперь сохраняется в movies-poiskkino.backup.json после каждой синхронизации и восстанавливается при запуске. Больше нет потери данных при перезапуске.",
-        "fr": "Correction de la réinitialisation de la base de données au redémarrage de l'adaptateur. La base de données est maintenant sauvegardée après chaque synchronisation et restaurée au démarrage.",
-        "it": "Correzione del ripristino del database al riavvio dell'adattatore. Il database viene ora salvato dopo ogni sincronizzazione e ripristinato all'avvio.",
-        "es": "Corrección del restablecimiento de la base de datos al reiniciar el adaptador. La base de datos ahora se guarda después de cada sincronización y se restaura al inicio.",
-        "pl": "Naprawiono resetowanie bazy danych przy ponownym uruchomieniu adaptera. Baza danych jest teraz zapisywana po każdej synchronizacji i przywracana przy uruchomieniu.",
-        "pt": "Correção da redefinição do banco de dados ao reiniciar o adaptador. O banco de dados agora é salvo após cada sincronização e restaurado na inicialização.",
-        "nl": "Databasereset bij herstart van adapter gecorrigeerd. Database wordt nu na elke synchronisatie opgeslagen en bij het opstarten hersteld.",
-        "zh-cn": "修复适配器重启时数据库重置的问题。数据库现在在每次同步后备份，并在启动时恢复。"
       }
     },
     "titleLang": {
@@ -104,11 +104,11 @@
       "en": "Movie discovery PWA with Kinopoisk API integration",
       "de": "Film-Entdeckungs-PWA mit Kinopoisk-API-Integration",
       "ru": "PWA для поиска фильмов с интеграцией Kinopoisk API",
-      "fr": "PWA de découverte de films avec intégration de l'API Kinopoisk",
+      "fr": "PWA de decouverte de films avec integration de l'API Kinopoisk",
       "it": "PWA per la scoperta di film con integrazione API Kinopoisk",
-      "es": "PWA de descubrimiento de películas con integración de API Kinopoisk",
-      "pl": "PWA do odkrywania filmów z integracją API Kinopoisk",
-      "pt": "PWA de descoberta de filmes com integração da API Kinopoisk",
+      "es": "PWA de descubrimiento de peliculas con integracion de API Kinopoisk",
+      "pl": "PWA do odkrywania filmow z integracja API Kinopoisk",
+      "pt": "PWA de descoberta de filmes com integracao da API Kinopoisk",
       "nl": "PWA voor filmontdekking met Kinopoisk API-integratie",
       "zh-cn": "电影发现PWA与Kinopoisk API集成"
     },
@@ -173,9 +173,7 @@
     {
       "_id": "info",
       "type": "channel",
-      "common": {
-        "name": "Information"
-      },
+      "common": { "name": "Information" },
       "native": {}
     },
     {
@@ -194,9 +192,7 @@
     {
       "_id": "sync",
       "type": "channel",
-      "common": {
-        "name": "Synchronization"
-      },
+      "common": { "name": "Synchronization" },
       "native": {}
     },
     {
@@ -235,12 +231,7 @@
         "read": true,
         "write": false,
         "def": "idle",
-        "states": {
-          "idle": "Idle",
-          "running": "Running",
-          "error": "Error",
-          "completed": "Completed"
-        }
+        "states": { "idle": "Idle", "running": "Running", "error": "Error", "completed": "Completed" }
       },
       "native": {}
     },
@@ -263,165 +254,85 @@
     {
       "_id": "sync.currentStep",
       "type": "state",
-      "common": {
-        "role": "text",
-        "name": "Current step",
-        "type": "string",
-        "read": true,
-        "write": false,
-        "def": ""
-      },
+      "common": { "role": "text", "name": "Current step", "type": "string", "read": true, "write": false, "def": "" },
       "native": {}
     },
     {
       "_id": "sync.totalMovies",
       "type": "state",
-      "common": {
-        "role": "value",
-        "name": "Total movies in database",
-        "type": "number",
-        "read": true,
-        "write": false,
-        "def": 0
-      },
+      "common": { "role": "value", "name": "Total movies in database", "type": "number", "read": true, "write": false, "def": 0 },
       "native": {}
     },
     {
       "_id": "sync.newMovies",
       "type": "state",
-      "common": {
-        "role": "value",
-        "name": "New movies added",
-        "type": "number",
-        "read": true,
-        "write": false,
-        "def": 0
-      },
+      "common": { "role": "value", "name": "New movies added", "type": "number", "read": true, "write": false, "def": 0 },
       "native": {}
     },
     {
       "_id": "sync.foundMovies",
       "type": "state",
-      "common": {
-        "role": "value",
-        "name": "Movies found in current sync",
-        "type": "number",
-        "read": true,
-        "write": false,
-        "def": 0
-      },
+      "common": { "role": "value", "name": "Movies found in current sync", "type": "number", "read": true, "write": false, "def": 0 },
       "native": {}
     },
     {
       "_id": "sync.requestsUsed",
       "type": "state",
-      "common": {
-        "role": "value",
-        "name": "API requests used",
-        "type": "number",
-        "read": true,
-        "write": false,
-        "def": 0
-      },
+      "common": { "role": "value", "name": "API requests used", "type": "number", "read": true, "write": false, "def": 0 },
       "native": {}
     },
     {
       "_id": "sync.requestsRemaining",
       "type": "state",
-      "common": {
-        "role": "value",
-        "name": "API requests remaining",
-        "type": "number",
-        "read": true,
-        "write": false,
-        "def": 0
-      },
+      "common": { "role": "value", "name": "API requests remaining", "type": "number", "read": true, "write": false, "def": 0 },
       "native": {}
     },
     {
       "_id": "sync.lastSync",
       "type": "state",
-      "common": {
-        "role": "date",
-        "name": "Last synchronization",
-        "type": "string",
-        "read": true,
-        "write": false,
-        "def": ""
-      },
+      "common": { "role": "date", "name": "Last synchronization", "type": "string", "read": true, "write": false, "def": "" },
       "native": {}
     },
     {
       "_id": "sync.error",
       "type": "state",
-      "common": {
-        "role": "text",
-        "name": "Error message",
-        "type": "string",
-        "read": true,
-        "write": false,
-        "def": ""
-      },
+      "common": { "role": "text", "name": "Error message", "type": "string", "read": true, "write": false, "def": "" },
       "native": {}
     },
     {
       "_id": "sync.reloadApp",
       "type": "state",
-      "common": {
-        "role": "button",
-        "name": "Reload app cache",
-        "type": "boolean",
-        "read": true,
-        "write": true,
-        "def": false
-      },
+      "common": { "role": "button", "name": "Reload app cache", "type": "boolean", "read": true, "write": true, "def": false },
       "native": {}
     },
     {
       "_id": "server",
       "type": "channel",
-      "common": {
-        "name": "Web Server"
-      },
+      "common": { "name": "Web Server" },
       "native": {}
     },
     {
       "_id": "server.url",
       "type": "state",
-      "common": {
-        "role": "text.url",
-        "name": "Application URL",
-        "type": "string",
-        "read": true,
-        "write": false,
-        "def": ""
-      },
+      "common": { "role": "text.url", "name": "Application URL", "type": "string", "read": true, "write": false, "def": "" },
+      "native": {}
+    },
+    {
+      "_id": "server.ip",
+      "type": "state",
+      "common": { "role": "text", "name": "Resolved server IP address", "type": "string", "read": true, "write": false, "def": "" },
       "native": {}
     },
     {
       "_id": "server.port",
       "type": "state",
-      "common": {
-        "role": "value",
-        "name": "Server port",
-        "type": "number",
-        "read": true,
-        "write": false,
-        "def": 3000
-      },
+      "common": { "role": "value", "name": "Server port", "type": "number", "read": true, "write": false, "def": 3000 },
       "native": {}
     },
     {
       "_id": "server.running",
       "type": "state",
-      "common": {
-        "role": "indicator.reachable",
-        "name": "Server running",
-        "type": "boolean",
-        "read": true,
-        "write": false,
-        "def": false
-      },
+      "common": { "role": "indicator.reachable", "name": "Server running", "type": "boolean", "read": true, "write": false, "def": false },
       "native": {}
     }
   ]
