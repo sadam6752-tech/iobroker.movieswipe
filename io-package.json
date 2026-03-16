@@ -86,8 +86,8 @@
         "pt": "Correcao de URLs na aba Status: server.url e URLs de backup agora mostram o IP real em vez do nome da interface.",
         "nl": "Status-tabblad URL's gecorrigeerd: server.url en backup-URL's tonen nu het echte opgeloste IP in plaats van de interfacenaam.",
         "zh-cn": "修复状态选项卡URL：server.url和备份URL现在显示真实解析的IP而不是接口名称。"
-      },
-      "1.0.34": {
+      }
+    },
     "titleLang": {
       "en": "MovieSwipe PWA",
       "de": "MovieSwipe PWA",
