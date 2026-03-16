@@ -1,8 +1,20 @@
 {
   "common": {
     "name": "movieswipe",
-    "version": "1.0.32",
+    "version": "1.0.33",
     "news": {
+      "1.0.33": {
+        "en": "Status tab now shows dynamic URLs based on configured bind IP and port settings.",
+        "de": "Status-Tab zeigt jetzt dynamische URLs basierend auf den konfigurierten Bind-IP- und Port-Einstellungen.",
+        "ru": "Вкладка Статус теперь показывает динамические URL на основе настроенных IP и порта.",
+        "fr": "L'onglet Statut affiche maintenant des URLs dynamiques basées sur l'IP et le port configurés.",
+        "it": "La scheda Stato ora mostra URL dinamici basati sull'IP e la porta configurati.",
+        "es": "La pestaña Estado ahora muestra URLs dinámicas basadas en la IP y el puerto configurados.",
+        "pl": "Zakładka Status teraz pokazuje dynamiczne URL na podstawie skonfigurowanego IP i portu.",
+        "pt": "A aba Status agora mostra URLs dinâmicas baseadas no IP e porta configurados.",
+        "nl": "Status-tabblad toont nu dynamische URL's op basis van geconfigureerd bind-IP en poort.",
+        "zh-cn": "状态选项卡现在根据配置的绑定IP和端口显示动态URL。"
+      },
       "1.0.32": {
         "en": "Add bind IP address setting. Select specific network interface for the web server in adapter settings (General tab).",
         "de": "IP-Bind-Einstellung hinzugefügt. Netzwerkschnittstelle für den Webserver in den Adaptereinstellungen (Allgemein) auswählen.",
@@ -74,18 +86,6 @@
         "pt": "Correção da redefinição do banco de dados ao reiniciar o adaptador. O banco de dados agora é salvo após cada sincronização e restaurado na inicialização.",
         "nl": "Databasereset bij herstart van adapter gecorrigeerd. Database wordt nu na elke synchronisatie opgeslagen en bij het opstarten hersteld.",
         "zh-cn": "修复适配器重启时数据库重置的问题。数据库现在在每次同步后备份，并在启动时恢复。"
-      },
-      "1.0.26": {
-        "en": "Fix sync script saving movies to wrong directory. Movies found during sync are now correctly added to the database (www/data instead of public/data). Also added support for --min-rating, --min-votes, --year-start, --year-end, --daily-limit CLI arguments.",
-        "de": "Sync-Skript speichert Filme jetzt im richtigen Verzeichnis. Gefundene Filme werden korrekt zur Datenbank hinzugefügt (www/data statt public/data). Unterstützung für --min-rating, --min-votes, --year-start, --year-end, --daily-limit CLI-Argumente hinzugefügt.",
-        "ru": "Исправлено сохранение фильмов в неправильную директорию. Найденные при синхронизации фильмы теперь корректно добавляются в базу (www/data вместо public/data). Добавлена поддержка аргументов --min-rating, --min-votes, --year-start, --year-end, --daily-limit.",
-        "fr": "Correction du script de synchronisation qui sauvegardait les films dans le mauvais répertoire. Les films trouvés lors de la synchronisation sont maintenant correctement ajoutés à la base de données.",
-        "it": "Correzione dello script di sincronizzazione che salvava i film nella directory sbagliata. I film trovati durante la sincronizzazione vengono ora aggiunti correttamente al database.",
-        "es": "Corrección del script de sincronización que guardaba películas en el directorio incorrecto. Las películas encontradas durante la sincronización ahora se agregan correctamente a la base de datos.",
-        "pl": "Naprawiono skrypt synchronizacji zapisujący filmy w złym katalogu. Filmy znalezione podczas synchronizacji są teraz poprawnie dodawane do bazy danych.",
-        "pt": "Correção do script de sincronização que salvava filmes no diretório errado. Os filmes encontrados durante a sincronização agora são adicionados corretamente ao banco de dados.",
-        "nl": "Synchronisatiescript gecorrigeerd dat films in de verkeerde map opsloeg. Films gevonden tijdens synchronisatie worden nu correct toegevoegd aan de database.",
-        "zh-cn": "修复同步脚本将电影保存到错误目录的问题。同步期间找到的电影现在正确添加到数据库中。"
       }
     },
     "titleLang": {

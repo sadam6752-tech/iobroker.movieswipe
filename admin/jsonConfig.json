@@ -251,7 +251,27 @@
         },
         "_serverInfo": {
           "type": "staticText",
-          "text": "Server URL: <a href='http://localhost:3000' target='_blank'>http://localhost:3000</a> (Check 'server.url' state for actual URL)",
+          "text": "Application URL (based on current settings):",
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
+        },
+        "_serverUrl": {
+          "type": "pattern",
+          "pattern": "http://${data.bind || '0.0.0.0'}:${data.port || 3000}",
+          "copyToClipboard": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
+        },
+        "_serverNote": {
+          "type": "staticText",
+          "text": "If bind is 0.0.0.0, use your host IP address to open the app. Check 'server.url' state for the actual URL.",
+          "style": { "fontSize": "12px", "fontStyle": "italic", "color": "#888" },
           "xs": 12,
           "sm": 12,
           "md": 12,
@@ -265,39 +285,36 @@
         },
         "_dbDownloadInfo": {
           "type": "staticText",
-          "text": "Download current database (replace PORT with your server port, default 3000):",
+          "text": "Backup Manager URL:",
           "xs": 12,
           "sm": 12,
           "md": 12,
           "lg": 12,
           "xl": 12
         },
-        "_dbDownloadLink": {
-          "type": "staticText",
-          "text": "<a href='http://localhost:3000/api/db/download' target='_blank'>⬇ Download database backup (http://localhost:3000/api/db/download)</a>",
+        "_dbBackupUrl": {
+          "type": "pattern",
+          "pattern": "http://${data.bind || '0.0.0.0'}:${data.port || 3000}/backup.html",
+          "copyToClipboard": true,
           "xs": 12,
           "sm": 12,
           "md": 12,
           "lg": 12,
           "xl": 12
         },
-        "_dbUploadInfo": {
+        "_dbDownloadInfo2": {
           "type": "staticText",
-          "text": "To restore database from backup — use curl or any HTTP client to POST the file to: http://YOUR_HOST:PORT/api/db/upload (field name: 'database'). Example: curl -X POST -F 'database=@movies-poiskkino-backup.json' http://localhost:3000/api/db/upload",
-          "style": {
-            "fontSize": "12px",
-            "fontStyle": "italic",
-            "color": "#888"
-          },
+          "text": "Direct download URL:",
           "xs": 12,
           "sm": 12,
           "md": 12,
           "lg": 12,
           "xl": 12
         },
-        "_dbInfoLink": {
-          "type": "staticText",
-          "text": "Database info: <a href='http://localhost:3000/api/db/info' target='_blank'>http://localhost:3000/api/db/info</a>",
+        "_dbDownloadUrl": {
+          "type": "pattern",
+          "pattern": "http://${data.bind || '0.0.0.0'}:${data.port || 3000}/api/db/download",
+          "copyToClipboard": true,
           "xs": 12,
           "sm": 12,
           "md": 12,
