@@ -1,8 +1,20 @@
 {
   "common": {
     "name": "movieswipe",
-    "version": "1.0.40",
+    "version": "1.0.41",
     "news": {
+      "1.0.41": {
+        "en": "Fix broken news section in io-package.json (JSON syntax error)",
+        "de": "Fehlerhafte news-Sektion in io-package.json behoben (JSON-Syntaxfehler)",
+        "ru": "Исправлена сломанная секция news в io-package.json (синтаксическая ошибка JSON)",
+        "fr": "Correction de la section news incorrecte dans io-package.json (erreur de syntaxe JSON)",
+        "it": "Corretta sezione news non valida in io-package.json (errore di sintassi JSON)",
+        "es": "Corregida seccion news incorrecta en io-package.json (error de sintaxis JSON)",
+        "pl": "Naprawiono uszkodzona sekcje news w io-package.json (blad skladni JSON)",
+        "pt": "Corrigida secao news incorreta em io-package.json (erro de sintaxe JSON)",
+        "nl": "Kapotte news-sectie in io-package.json hersteld (JSON-syntaxisfout)",
+        "zh-cn": "修复 io-package.json 中损坏的 news 部分（JSON 语法错误）"
+      },
       "1.0.40": {
         "en": "Bind IP field: replaced interface selector with ip type (listenOnAllPorts: true) to allow selecting 0.0.0.0 for all interfaces.",
         "de": "Bind-IP-Feld: Schnittstellenauswahl durch ip-Typ ersetzt (listenOnAllPorts: true), um 0.0.0.0 fuer alle Schnittstellen auswaehlen zu koennen.",
@@ -74,18 +86,6 @@
         "pt": "Correcao inicio servidor web quando nome de interface (ex. ovs_eth0) selecionado em vez de IP. O nome e agora resolvido para IP antes do binding.",
         "nl": "Webserver start nu correct wanneer interfacenaam (bijv. ovs_eth0) geselecteerd is in plaats van IP. Naam wordt nu omgezet naar IP voor binding.",
         "zh-cn": "修复选择网络接口名称（如ovs_eth0）而非IP时Web服务器无法启动的问题。绑定前接口名称现在会被解析为IP。"
-      },
-      "1.0.34": {
-        "en": "Fix Status tab URLs: server.url and backup URLs now show real resolved IP instead of interface name.",
-        "de": "Status-Tab URLs korrigiert: server.url und Backup-URLs zeigen jetzt die echte aufgelöste IP statt des Schnittstellennamens.",
-        "ru": "Исправлены URL во вкладке Статус: server.url и URL бэкапа теперь показывают реальный IP вместо имени интерфейса.",
-        "fr": "Correction des URLs de l'onglet Statut: server.url et les URLs de backup affichent maintenant l'IP reelle au lieu du nom d'interface.",
-        "it": "Correzione URL scheda Stato: server.url e URL backup ora mostrano l'IP reale invece del nome dell'interfaccia.",
-        "es": "Correccion de URLs en pestana Estado: server.url y URLs de backup ahora muestran la IP real en lugar del nombre de interfaz.",
-        "pl": "Poprawiono URL w zakladce Status: server.url i URL kopii zapasowej teraz pokazuja rzeczywisty IP zamiast nazwy interfejsu.",
-        "pt": "Correcao de URLs na aba Status: server.url e URLs de backup agora mostram o IP real em vez do nome da interface.",
-        "nl": "Status-tabblad URL's gecorrigeerd: server.url en backup-URL's tonen nu het echte opgeloste IP in plaats van de interfacenaam.",
-        "zh-cn": "修复状态选项卡URL：server.url和备份URL现在显示真实解析的IP而不是接口名称。"
       }
     },
     "titleLang": {
@@ -156,8 +156,8 @@
     "port": 3000,
     "bind": "0.0.0.0",
     "apiKeys": [],
-    "minRating": 5.0,
-    "maxRating": 10.0,
+    "minRating": 5,
+    "maxRating": 10,
     "minVotes": 500,
     "yearRangeStart": 2020,
     "yearRangeEnd": 2026,
