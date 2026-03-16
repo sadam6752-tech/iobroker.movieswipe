@@ -36,3 +36,7 @@ tmp/
 temp/
 # Kiro steering files (local only)
 .kiro/steering/
+
+
+# ioBroker dev-server
+.dev-server/

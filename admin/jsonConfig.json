@@ -249,14 +249,16 @@
           "text": "Web Server Status",
           "size": 3
         },
-        "_serverInfo": {
-          "type": "staticText",
-          "text": "Application URL: http://[YOUR-HOST-IP]:${data.port}",
+        "_serverUrl": {
+          "type": "staticLink",
+          "href": "http://localhost:${data.port}",
+          "text": "http://localhost:${data.port}",
+          "label": "Application URL",
           "xs": 12, "sm": 12, "md": 12, "lg": 12, "xl": 12
         },
         "_serverNote": {
           "type": "staticText",
-          "text": "Replace [YOUR-HOST-IP] with your server IP. Full URL also available in Objects tab: movieswipe.0 → server → url",
+          "text": "Replace 'localhost' with your server IP if accessing remotely. Actual URL with IP: Objects → movieswipe.0 → server → url",
           "style": { "fontSize": "12px", "fontStyle": "italic", "color": "#888" },
           "xs": 12, "sm": 12, "md": 12, "lg": 12, "xl": 12
         },
@@ -265,14 +267,16 @@
           "text": "Database Backup",
           "size": 3
         },
-        "_dbDownloadInfo": {
-          "type": "staticText",
-          "text": "Backup Manager: http://[YOUR-HOST-IP]:${data.port}/backup.html",
+        "_dbBackupUrl": {
+          "type": "staticLink",
+          "href": "http://localhost:${data.port}/backup.html",
+          "text": "http://localhost:${data.port}/backup.html",
+          "label": "Backup Manager",
           "xs": 12, "sm": 12, "md": 12, "lg": 12, "xl": 12
         },
-        "_dbDownloadInfo2": {
+        "_dbNote": {
           "type": "staticText",
-          "text": "Replace [YOUR-HOST-IP] with your server IP (see server.url state in Objects tab)",
+          "text": "Replace 'localhost' with your server IP if accessing remotely.",
           "style": { "fontSize": "12px", "fontStyle": "italic", "color": "#888" },
           "xs": 12, "sm": 12, "md": 12, "lg": 12, "xl": 12
         },

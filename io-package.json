@@ -1,8 +1,20 @@
 {
   "common": {
     "name": "movieswipe",
-    "version": "1.0.38",
+    "version": "1.0.39",
     "news": {
+      "1.0.39": {
+        "en": "Status tab: clickable links for app URL and backup manager using port from config. Replace localhost with server IP if accessing remotely.",
+        "de": "Status-Tab: klickbare Links fuer App-URL und Backup-Manager mit Port aus Konfiguration.",
+        "ru": "Вкладка Статус: кликабельные ссылки для URL приложения и менеджера бэкапов с портом из конфига.",
+        "fr": "Onglet Statut: liens cliquables pour URL app et gestionnaire backup avec port de la config.",
+        "it": "Scheda Stato: link cliccabili per URL app e gestore backup con porta dalla config.",
+        "es": "Pestana Estado: enlaces clicables para URL app y gestor backup con puerto de la config.",
+        "pl": "Zakladka Status: klikalne linki dla URL aplikacji i menedzera kopii z portem z konfiguracji.",
+        "pt": "Aba Status: links clicaveis para URL do app e gerenciador de backup com porta da config.",
+        "nl": "Status-tabblad: klikbare links voor app-URL en backup-manager met poort uit configuratie.",
+        "zh-cn": "状态选项卡：使用配置中端口的应用URL和备份管理器可点击链接。"
+      },
       "1.0.38": {
         "en": "Status tab: show port from config in URL hints using staticText with data interpolation.",
         "de": "Status-Tab: Port aus Konfiguration in URL-Hinweisen anzeigen mit staticText und Daten-Interpolation.",
@@ -74,18 +86,6 @@
         "pt": "A aba Status agora mostra URLs dinamicas baseadas no IP e porta configurados.",
         "nl": "Status-tabblad toont nu dynamische URL's op basis van geconfigureerd bind-IP en poort.",
         "zh-cn": "状态选项卡现在根据配置的绑定IP和端口显示动态URL。"
-      },
-      "1.0.32": {
-        "en": "Add bind IP address setting. Select specific network interface for the web server in adapter settings (General tab).",
-        "de": "IP-Bind-Einstellung hinzugefugt. Netzwerkschnittstelle fur den Webserver in den Adaptereinstellungen (Allgemein) auswahlen.",
-        "ru": "Добавлена настройка IP-адреса привязки. Выберите сетевой интерфейс для веб-сервера в настройках адаптера (вкладка Общие).",
-        "fr": "Ajout du parametre d'adresse IP de liaison. Selectionnez l'interface reseau pour le serveur web dans les parametres de l'adaptateur.",
-        "it": "Aggiunta impostazione indirizzo IP di binding. Seleziona l'interfaccia di rete per il server web nelle impostazioni dell'adattatore.",
-        "es": "Anadida configuracion de direccion IP de enlace. Seleccione la interfaz de red para el servidor web en la configuracion del adaptador.",
-        "pl": "Dodano ustawienie adresu IP powiazania. Wybierz interfejs sieciowy dla serwera web w ustawieniach adaptera.",
-        "pt": "Adicionada configuracao de endereco IP de ligacao. Selecione a interface de rede para o servidor web nas configuracoes do adaptador.",
-        "nl": "Bind IP-adresinstelling toegevoegd. Selecteer netwerkinterface voor de webserver in de adapterinstellingen.",
-        "zh-cn": "添加绑定IP地址设置。在适配器设置中选择Web服务器的网络接口。"
       }
     },
     "titleLang": {
