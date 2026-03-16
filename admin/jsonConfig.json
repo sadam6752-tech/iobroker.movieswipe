@@ -259,11 +259,11 @@
           "xl": 12
         },
         "_serverUrl": {
-          "type": "state",
-          "system": true,
-          "id": "system.adapter.movieswipe.0.alive",
-          "oid": "movieswipe.0.server.url",
-          "addColon": false,
+          "type": "sendTo",
+          "command": "getServerUrl",
+          "jsonData": "{}",
+          "result": "${data.url}",
+          "label": "Application URL",
           "xs": 12,
           "sm": 12,
           "md": 12,
@@ -295,9 +295,11 @@
           "xl": 12
         },
         "_dbBackupUrl": {
-          "type": "state",
-          "oid": "movieswipe.0.server.url",
-          "addColon": false,
+          "type": "sendTo",
+          "command": "getServerUrl",
+          "jsonData": "{}",
+          "result": "${data.url}/backup.html",
+          "label": "Backup Manager URL",
           "xs": 12,
           "sm": 12,
           "md": 12,

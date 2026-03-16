@@ -1,8 +1,20 @@
 {
   "common": {
     "name": "movieswipe",
-    "version": "1.0.35",
+    "version": "1.0.36",
     "news": {
+      "1.0.36": {
+        "en": "Status tab now shows real server URL via sendTo. Added onMessage handler for getServerUrl command.",
+        "de": "Status-Tab zeigt jetzt echte Server-URL via sendTo. onMessage-Handler fuer getServerUrl-Befehl hinzugefuegt.",
+        "ru": "Вкладка Статус теперь показывает реальный URL сервера через sendTo. Добавлен обработчик onMessage для команды getServerUrl.",
+        "fr": "L'onglet Statut affiche maintenant l'URL reelle du serveur via sendTo. Gestionnaire onMessage ajoute pour la commande getServerUrl.",
+        "it": "La scheda Stato ora mostra l'URL reale del server tramite sendTo. Aggiunto gestore onMessage per il comando getServerUrl.",
+        "es": "La pestana Estado ahora muestra la URL real del servidor via sendTo. Anadido manejador onMessage para el comando getServerUrl.",
+        "pl": "Zakladka Status teraz pokazuje rzeczywisty URL serwera przez sendTo. Dodano handler onMessage dla komendy getServerUrl.",
+        "pt": "A aba Status agora mostra a URL real do servidor via sendTo. Adicionado handler onMessage para o comando getServerUrl.",
+        "nl": "Status-tabblad toont nu echte server-URL via sendTo. onMessage-handler toegevoegd voor getServerUrl-commando.",
+        "zh-cn": "状态选项卡现在通过sendTo显示真实服务器URL。为getServerUrl命令添加了onMessage处理程序。"
+      },
       "1.0.35": {
         "en": "Fix web server failing to start when network interface name (e.g. ovs_eth0) is selected instead of IP. Interface name is now resolved to IP before binding.",
         "de": "Fehler behoben: Webserver startet nicht wenn Schnittstellenname (z.B. ovs_eth0) statt IP ausgewaehlt ist. Schnittstellenname wird jetzt vor dem Binden in IP aufgeloest.",
@@ -74,18 +86,6 @@
         "pt": "Correcao SyntaxError em web-server.js. O adaptador agora inicia corretamente.",
         "nl": "SyntaxError in web-server.js gecorrigeerd. Adapter start nu correct.",
         "zh-cn": "修复web-server.js中的SyntaxError。适配器现在可以正确启动。"
-      },
-      "1.0.29": {
-        "en": "Fix database reset on adapter update. Backup stored in iobroker-data (survives updates). Add database backup manager: download/restore via browser at http://HOST:PORT/backup.html",
-        "de": "Datenbank-Reset bei Adapter-Update behoben. Backup in iobroker-data gespeichert. Datenbank-Backup-Manager hinzugefugt: Download/Wiederherstellung uber Browser.",
-        "ru": "Исправлен сброс базы при обновлении адаптера. Бэкап хранится в iobroker-data. Добавлен менеджер бэкапов: скачать/восстановить базу через браузер.",
-        "fr": "Correction reinitialisation base lors mise a jour. Backup dans iobroker-data. Gestionnaire de backup ajoute: telechargement/restauration via navigateur.",
-        "it": "Correzione reset database su aggiornamento. Backup in iobroker-data. Aggiunto gestore backup: download/ripristino via browser.",
-        "es": "Correccion reset base en actualizacion. Backup en iobroker-data. Gestor de backup anadido: descarga/restauracion via navegador.",
-        "pl": "Naprawiono reset bazy przy aktualizacji. Backup w iobroker-data. Dodano menedzera kopii zapasowych: pobieranie/przywracanie przez przegladarke.",
-        "pt": "Correcao reset banco na atualizacao. Backup em iobroker-data. Gerenciador de backup adicionado: download/restauracao via navegador.",
-        "nl": "Databasereset bij update gecorrigeerd. Backup in iobroker-data. Backup-manager toegevoegd: download/herstel via browser.",
-        "zh-cn": "修复适配器更新时数据库重置。备份存储在iobroker-data中。添加备份管理器：通过浏览器下载/恢复。"
       }
     },
     "titleLang": {

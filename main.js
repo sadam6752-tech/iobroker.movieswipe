@@ -18,6 +18,7 @@ class MovieSwipe extends utils.Adapter {
 
     this.on('ready', this.onReady.bind(this));
     this.on('stateChange', this.onStateChange.bind(this));
+    this.on('message', this.onMessage.bind(this));
     this.on('unload', this.onUnload.bind(this));
   }
 
@@ -243,6 +244,17 @@ class MovieSwipe extends utils.Adapter {
       }
     } catch (error) {
       this.log.error(`Error handling state change: ${error.message}`);
+    }
+  }
+
+  onMessage(obj) {
+    if (!obj || !obj.command) return;
+    if (obj.command === 'getServerUrl') {
+      const port = this.config.port || 3000;
+      const bind = this.config.bind || '0.0.0.0';
+      const ip = this.resolveBindAddress(bind);
+      const url = `http://${ip}:${port}`;
+      if (obj.callback) this.sendTo(obj.from, obj.command, { url, ip, port }, obj.callback);
     }
   }
 
