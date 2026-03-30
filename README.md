@@ -170,6 +170,12 @@ Free tier provides 200 requests per day per key. You can add multiple keys for e
 
 ## Changelog
 
+### 1.0.44 (2026-03-30)
+- (sadam6752-tech) Add CI/CD workflow, dependabot, release-script
+- (sadam6752-tech) Use node: prefix for built-in modules (path, fs, os)
+- (sadam6752-tech) Fix unload: null references after cleanup
+- (sadam6752-tech) Fix lint warnings in web-server.js and main.js
+
 ### 1.0.43 (2026-03-19)
 - Add EU server mirror option (eu-api.poiskkino.dev) for users in Europe where main API is not accessible
 

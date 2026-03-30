@@ -1,8 +1,9 @@
 'use strict';
 
 const utils = require('@iobroker/adapter-core');
-const path = require('path');
-const fs = require('fs');
+const path = require('node:path');
+const fs = require('node:fs');
+const os = require('node:os');
 const WebServer = require('./lib/web-server');
 const SyncManager = require('./lib/sync-manager');
 
@@ -31,7 +32,7 @@ class MovieSwipe extends utils.Adapter {
 
   async handleDatabasePreservation() {
     const dbPath = path.join(__dirname, 'www/data/movies-poiskkino.json');
-    const { backupDir, backupPath } = this.getBackupPath();
+    const { backupPath } = this.getBackupPath();
 
     try {
       if (this.config.preserveDatabase !== false) {
@@ -67,7 +68,6 @@ class MovieSwipe extends utils.Adapter {
    * Резолвить IP адрес из имени интерфейса или вернуть как есть если уже IP
    */
   resolveBindAddress(bind) {
-    const os = require('os');
     if (!bind || bind === '0.0.0.0' || bind === '::') {
       // Слушаем на всех — вернуть первый не-loopback IPv4
       const interfaces = os.networkInterfaces();
@@ -262,22 +262,17 @@ class MovieSwipe extends utils.Adapter {
     try {
       this.log.debug('Cleaning up...');
 
-      // Остановить автосинхронизацию
       if (this.syncManager) {
         this.syncManager.stopAutoSync();
-      }
-
-      // Остановить синхронизацию
-      if (this.syncManager) {
         await this.syncManager.stop();
+        this.syncManager = null;
       }
 
-      // Остановить веб-сервер
       if (this.webServer) {
         await this.webServer.stop();
+        this.webServer = null;
       }
 
-      // Обновить states
       await this.setStateAsync('info.connection', false, true);
       await this.setStateAsync('server.running', false, true);
 

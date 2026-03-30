@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "movieswipe",
-    "version": "1.0.43",
+    "version": "1.0.44",
     "news": {
+      "1.0.44": {
+        "en": "Add CI/CD workflow, dependabot, release-script; use node: prefix for built-in modules; fix unload cleanup; fix lint warnings",
+        "de": "CI/CD Workflow, Dependabot, Release-Script hinzugefuegt; node:-Praefix fuer eingebaute Module; Unload-Bereinigung verbessert; Lint-Warnungen behoben",
+        "ru": "Добавлены CI/CD workflow, dependabot, release-script; префикс node: для встроенных модулей; улучшена очистка unload; исправлены lint-предупреждения",
+        "fr": "Ajout CI/CD workflow, dependabot, release-script; prefixe node: pour modules integres; nettoyage unload ameliore; avertissements lint corriges",
+        "it": "Aggiunto CI/CD workflow, dependabot, release-script; prefisso node: per moduli integrati; pulizia unload migliorata; avvisi lint corretti",
+        "es": "Anadido CI/CD workflow, dependabot, release-script; prefijo node: para modulos integrados; limpieza unload mejorada; advertencias lint corregidas",
+        "pl": "Dodano CI/CD workflow, dependabot, release-script; prefiks node: dla wbudowanych modulow; ulepszone czyszczenie unload; naprawiono ostrzezenia lint",
+        "pt": "Adicionado CI/CD workflow, dependabot, release-script; prefixo node: para modulos integrados; limpeza unload melhorada; avisos lint corrigidos",
+        "nl": "CI/CD workflow, dependabot, release-script toegevoegd; node: prefix voor ingebouwde modules; unload opruiming verbeterd; lint waarschuwingen opgelost",
+        "uk": "Додано CI/CD workflow, dependabot, release-script; префікс node: для вбудованих модулів; покращено очищення unload; виправлено lint-попередження",
+        "zh-cn": "添加CI/CD工作流、dependabot、release-script；内置模块使用node:前缀；改进unload清理；修复lint警告"
+      },
       "1.0.43": {
         "en": "Add EU server mirror option (eu-api.poiskkino.dev) for users in Europe where main API is not accessible",
         "de": "EU-Server-Spiegel-Option hinzugefuegt (eu-api.poiskkino.dev) fuer Nutzer in Europa, bei denen die Haupt-API nicht erreichbar ist",
@@ -76,18 +89,6 @@
         "pt": "Aba Status: exibe porta da config nas dicas de URL via staticText com interpolacao de dados.",
         "nl": "Status-tabblad: poort uit config tonen in URL-hints via staticText met data-interpolatie.",
         "zh-cn": "状态选项卡：使用staticText数据插值在URL提示中显示配置中的端口。"
-      },
-      "1.0.37": {
-        "en": "Status tab: replaced non-working sendTo buttons with simple port display and instructions to find full URL in Objects tab (server.url state).",
-        "de": "Status-Tab: nicht funktionierende sendTo-Schaltflaechen durch einfache Port-Anzeige und Anweisung ersetzt, die vollstaendige URL im Objects-Tab zu finden (server.url State).",
-        "ru": "Вкладка Статус: заменены нерабочие кнопки sendTo на простое отображение порта и инструкцию найти полный URL во вкладке Objects (state server.url).",
-        "fr": "Onglet Statut: boutons sendTo non fonctionnels remplaces par affichage simple du port et instructions pour trouver l'URL complete dans l'onglet Objects.",
-        "it": "Scheda Stato: pulsanti sendTo non funzionanti sostituiti con visualizzazione semplice della porta e istruzioni per trovare l'URL completo nella scheda Objects.",
-        "es": "Pestana Estado: botones sendTo no funcionales reemplazados por visualizacion simple del puerto e instrucciones para encontrar la URL completa en la pestana Objects.",
-        "pl": "Zakladka Status: niedzialajaace przyciski sendTo zastapione prostym wyswietlaniem portu i instrukcja znalezienia pelnego URL w zakladce Objects.",
-        "pt": "Aba Status: botoes sendTo nao funcionais substituidos por exibicao simples da porta e instrucoes para encontrar a URL completa na aba Objects.",
-        "nl": "Status-tabblad: niet-werkende sendTo-knoppen vervangen door eenvoudige poortweergave en instructies om volledige URL te vinden in Objects-tabblad.",
-        "zh-cn": "状态选项卡：将不工作的sendTo按钮替换为简单的端口显示和在Objects选项卡中查找完整URL的说明。"
       }
     },
     "titleLang": {
